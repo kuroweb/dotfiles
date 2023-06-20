@@ -1,11 +1,26 @@
 # dotfiles
 
-## .zshrc
+## Homebrew
 
-シェルスクリプトでシンボリックリンクを作成
+Homebrew をインストール
 
 ```shell
-bash install.sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+各種パッケージをインストール
+
+```shell
+cd .config/homebrew
+brew bundle
+```
+
+## .zshrc
+
+シンボリックリンクを作成
+
+```shell
+ln -sf ~/dotfiles/.config/zsh/zshrc ~/.zshrc
 ```
 
 設定内容を読み込む
@@ -16,4 +31,4 @@ source ~/.zshrc
 
 ## Raycast
 
-import機能で設定ファイルを読み込む
+import 機能で設定ファイルを読み込む
