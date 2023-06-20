@@ -1,21 +1,17 @@
-# Common
-brew "awscli"
+# credential
 brew "direnv"
-brew "gcc"
-brew "guile"
-brew "gnupg"
-brew "gnutls"
-brew "gmp"
-brew "jq"
-brew "mas"
-brew "nginx"
-brew "pandoc"
-brew "telnet"
-brew "tree"
-brew "wget"
-brew "yarn"
 
-# Ruby
+# cli
+brew "awscli"
+
+# package manager
+brew "yarn"
+brew "mas"
+
+# editor
+brew "nvim"
+
+# ruby
 brew "icu4c"
 brew "libyaml"
 brew "openssl@3"
@@ -23,23 +19,36 @@ brew "rbenv"
 brew "readline"
 brew "ruby-build"
 
-# Python
+# python
 brew "python@3.11"
 
-# Node
+# node
 brew "node"
 brew "nvm"
 
-# Database
+# db
 brew "mysql"
 brew "postgresql@14"
 brew "sqlite"
 
-# IaC
+# iac
 brew "terraform"
 
-# Launcher
+# launcher
 cask "raycast"
 
-# File System
+# file system
 cask "mounty"
+
+# other
+brew "gcc"
+brew "guile"
+brew "gnupg"
+brew "gnutls"
+brew "gmp"
+brew "jq"
+brew "nginx"
+brew "pandoc"
+brew "telnet"
+brew "tree"
+brew "wget"
