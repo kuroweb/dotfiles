@@ -1,0 +1,6 @@
+# !/bin/zsh -e
+
+. ~/dotfiles/src/zsh/prompt.zsh
+
+# direnv
+eval "$(direnv hook zsh)"
