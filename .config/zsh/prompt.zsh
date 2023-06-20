@@ -1,4 +1,4 @@
-# !/bin/zsh -e
+#!/bin/zsh
 
 autoload -Uz vcs_info
 setopt prompt_subst

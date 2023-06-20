@@ -1,4 +1,4 @@
-# !/bin/zsh -e
+#!/bin/zsh
 
 source ~/dotfiles/.config/zsh/env.global.zsh
 

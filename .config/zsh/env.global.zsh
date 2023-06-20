@@ -1,4 +1,4 @@
-# !/bin/zsh -e
+#!/bin/zsh
 
 # homebrew
 export PATH=/usr/local/bin:$PATH
