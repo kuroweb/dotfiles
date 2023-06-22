@@ -2,8 +2,8 @@
 
 source ~/dotfiles/.config/zsh/env.global.zsh
 
-if [ -f "~/dotfiles/.config/zsh/env.local.zsh" ]; then
-	source "~/dotfiles/.config/zsh/env.local.zsh"
+if [[ -f ~/dotfiles/.config/zsh/env.local.zsh ]]; then
+	source ~/dotfiles/.config/zsh/env.local.zsh
 fi
 
 source ~/dotfiles/.config/zsh/prompt.zsh
