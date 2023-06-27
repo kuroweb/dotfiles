@@ -1,5 +1,5 @@
 .env
-.DS-Store
+.DS_Store
 
 # zsh
 /.config/zsh/env.local.zsh
