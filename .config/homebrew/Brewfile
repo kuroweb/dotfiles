@@ -40,6 +40,10 @@ cask "raycast"
 # file system
 cask "mounty"
 
+# android
+brew "scrcpy"
+cask "android-platform-tools"
+
 # other
 brew "gcc"
 brew "guile"
