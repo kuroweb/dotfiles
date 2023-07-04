@@ -44,6 +44,11 @@ cask "mounty"
 brew "scrcpy"
 cask "android-platform-tools"
 
+# kubernetes
+brew "minikube"
+brew "hyperkit"
+brew "kind"
+
 # other
 brew "gcc"
 brew "guile"
