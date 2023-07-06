@@ -1,7 +1,7 @@
 # credential
 brew "direnv"
 
-# cli
+# aws
 brew "awscli"
 
 # package manager
@@ -38,7 +38,10 @@ brew "terraform"
 cask "raycast"
 
 # file system
-cask "mounty"
+cask "macfuse"
+tap "gromgit/homebrew-fuse"
+brew "ntfs-3g-mac"
+cask "gromgit/fuse/mounty"
 
 # android
 brew "scrcpy"
