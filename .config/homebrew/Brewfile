@@ -1,67 +1,139 @@
-# credential
-brew "direnv"
+#
+# homebrew
+#
 
-# aws
-brew "awscli"
+tap "homebrew/services"
 
-# package manager
-brew "yarn"
-brew "mas"
-
-# editor
-brew "nvim"
-
+#
 # ruby
+#
+
 brew "icu4c"
 brew "libyaml"
 brew "openssl@3"
+brew "openssl@1.1"
 brew "rbenv"
 brew "readline"
 brew "ruby-build"
 
+#
 # python
-brew "python@3.11"
+#
 
-# node
-brew "node"
-brew "nvm"
+brew "python"
 
-# db
+#
+# databases
+#
+
 brew "mysql"
 brew "postgresql@14"
 brew "sqlite"
 
-# iac
-brew "terraform"
+#
+# terraform
+#
 
-# launcher
-cask "raycast"
+brew "tfenv"
 
-# file system
+#
+# mounty
+#
+
 cask "macfuse"
 tap "gromgit/homebrew-fuse"
 brew "ntfs-3g-mac"
 cask "gromgit/fuse/mounty"
 
-# android
-brew "scrcpy"
-cask "android-platform-tools"
-
+#
 # kubernetes
+#
+
 brew "minikube"
 brew "hyperkit"
 brew "kind"
 brew "kubernetes-cli"
 
+#
+# go
+#
+
+brew "goenv"
+
+#
+# Applications
+#
+
+cask "iterm2"
+cask "notion"
+cask "slack"
+cask "azure-data-studio"
+cask "visual-studio-code"
+cask "google-japanese-ime"
+cask "raycast"
+brew "jmeter"
+
+#
+# Command line tools
+#
+
+brew "awscli"
+brew "direnv"
+brew "jq"
+brew "mas"
+brew "nvim"
+brew "telnet"
+
+#
+# scrcpy
+#
+
+brew "scrcpy"
+cask "android-platform-tools"
+
+#
+# Node.js
+#
+
+brew "nodenv"
+brew "node-build"
+brew "node"
+brew "yarn"
+brew "npm"
+
+#
+# mutagen
+#
+
+tap "mutagen-io/mutagen"
+brew "mutagen-io/mutagen/mutagen-compose"
+
+#
+# java
+#
+
+brew "openjdk"
+
+#
+# fastly
+#
+
+tap "fastly/tap"
+brew "fastly/tap/fastly"
+
+#
 # other
+#
+
 brew "gcc"
 brew "guile"
 brew "gnupg"
 brew "gnutls"
 brew "gmp"
-brew "jq"
-brew "nginx"
-brew "pandoc"
-brew "telnet"
-brew "tree"
 brew "wget"
+brew "graphviz"
+brew "just"
+brew "coreutils"
+brew "tree"
+cask "notunes"
+brew "redis"

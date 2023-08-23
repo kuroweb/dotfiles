@@ -4,28 +4,40 @@
 
 Homebrew をインストール
 
-```shell
+```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 各種パッケージをインストール
 
-```shell
+```bash
 cd .config/homebrew
 brew bundle
+```
+
+差分チェック
+
+```bash
+brew bundle cleanup
+```
+
+Brewfileの内容で更新
+
+```bash
+brew bundle cleanup --force
 ```
 
 ## .zshrc
 
 シンボリックリンクを作成
 
-```shell
+```bash
 ln -sf ~/dotfiles/.config/zsh/zshrc ~/.zshrc
 ```
 
 設定内容を読み込む
 
-```shell
+```bash
 source ~/.zshrc
 ```
 
