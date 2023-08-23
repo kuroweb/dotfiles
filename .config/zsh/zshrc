@@ -1,12 +1,85 @@
 #!/bin/zsh
 
-source ~/dotfiles/.config/zsh/env.global.zsh
+#
+# zsh
+#
 
-if [[ -f ~/dotfiles/.config/zsh/env.local.zsh ]]; then
-  source ~/dotfiles/.config/zsh/env.local.zsh
+zsh_path=$(dirname $(readlink -f ~/.zshrc))
+
+if [[ -f $zsh_path/env.zsh ]]; then
+  source $zsh_path/env.zsh
 fi
 
-source ~/dotfiles/.config/zsh/prompt.zsh
+source $zsh_path/prompt.zsh
 
+#
+# homebrew
+#
+
+if [[ "$(uname)" == 'Darwin' ]] && [[ "$(uname -m)" == 'x86_64' ]]; then
+  export PATH=/usr/local/bin:$PATH
+elif [[ "$(uname)" == 'Darwin' ]] && [[ "$(uname -m)" == 'arm64' ]]; then
+  export PATH=/opt/homebrew/bin:$PATH
+fi
+
+#
 # direnv
+#
+
 eval "$(direnv hook zsh)"
+
+#
+# editor
+#
+
+export EDITOR=nvim
+
+#
+# ruby
+#
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+export LANG=en_US.UTF-8
+
+#
+# go
+#
+
+export GOENV_ROOT="$HOME/.goenv"
+export PATH="$GOENV_ROOT/bin:$PATH"
+export GO111MODULE=on
+eval "$(goenv init -)"
+
+#
+# node
+#
+
+eval "$(nodenv init -)"
+
+#
+# java
+#
+
+PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
+
+#
+# docker
+#
+
+ulimit -n 9480
+
+#
+# git functions
+#
+
+function git_private() {
+	git config --global user.name $GIT_USER_PRIVATE
+	git config --global user.email $GIT_EMAIL_PRIVATE
+}
+
+function git_work() {
+	git config --global user.name $GIT_USER_WORK
+	git config --global user.email $GIT_EMAIL_WORK
+}
