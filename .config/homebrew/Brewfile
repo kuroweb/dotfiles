@@ -3,6 +3,7 @@
 #
 
 tap "homebrew/services"
+tap "homebrew/core"
 
 #
 # ruby
@@ -72,6 +73,7 @@ cask "visual-studio-code"
 cask "google-japanese-ime"
 cask "raycast"
 brew "jmeter"
+cask "warp"
 
 #
 # Command line tools
