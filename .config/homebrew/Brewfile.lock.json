@@ -2002,6 +2002,15 @@
             }
           }
         }
+      },
+      "sanemat/font/ricty": {
+        "version": "4.1.1",
+        "bottle": false,
+        "options": {
+          "args": [
+            "with-powerline"
+          ]
+        }
       }
     },
     "cask": {
@@ -2093,6 +2102,9 @@
       },
       "fastly/tap": {
         "revision": "4ca9e12f4168fc8dd39be6e1156f784f0251b779"
+      },
+      "sanemat/font": {
+        "revision": "b9c208d3a58c305764e8b311b45b65855629804c"
       }
     }
   },

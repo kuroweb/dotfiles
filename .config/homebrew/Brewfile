@@ -144,4 +144,4 @@ brew "redis"
 #
 
 tap "sanemat/font"
-brew "sanemat/font/ricty"
+brew "sanemat/font/ricty", args: ["with-powerline"]
