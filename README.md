@@ -27,7 +27,39 @@ Brewfileの内容で更新
 brew bundle cleanup --force
 ```
 
-## .zshrc
+## powerline-shell
+
+※ 予め、Homebrewで `Ricty for Powerline` をインストール済みであること
+
+```bash
+cp -f /usr/local/opt/ricty/share/fonts/Ricty*.ttf ~/Library/Fonts/
+fc-cache -vf
+```
+
+iterm2でフォントを変更
+
+```
+Preferences -> Profiles -> Text -> Font
+#=> 「Ricty for Powerline」を選択
+#=> font sizeで16を選択
+```
+
+powerline-shellをインストール
+
+```bash
+git clone https://github.com/b-ryan/powerline-shell
+cd powerline-shell
+python3 setup.py install
+```
+
+設定ファイルのシンボリックリンクを作成
+
+```bash
+mkdir ~/.config/powerline-shell
+ln -sf ~/dotfiles/.config/powerline-shell/config.json ~/.config/powerline-shell/config.json
+```
+
+## zsh
 
 シンボリックリンクを作成
 

@@ -2089,7 +2089,7 @@
         "revision": "63abd671e4d85de4a58ef16fba6a8ff6763369a3"
       },
       "homebrew/services": {
-        "revision": "d3176c4e0b0eb7668077e069180a3110d0ee2229"
+        "revision": "ddae9cf5289501bce492aa68690276d16a2a1b76"
       },
       "fastly/tap": {
         "revision": "4ca9e12f4168fc8dd39be6e1156f784f0251b779"
@@ -2099,7 +2099,7 @@
   "system": {
     "macos": {
       "ventura": {
-        "HOMEBREW_VERSION": "4.1.6",
+        "HOMEBREW_VERSION": "4.1.7",
         "HOMEBREW_PREFIX": "/opt/homebrew",
         "Homebrew/homebrew-core": "api",
         "CLT": "14.3.1.0.1.1683849156",

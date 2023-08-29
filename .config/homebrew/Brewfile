@@ -138,3 +138,10 @@ brew "coreutils"
 brew "tree"
 cask "notunes"
 brew "redis"
+
+#
+# font
+#
+
+tap "sanemat/font"
+brew "sanemat/font/ricty"
