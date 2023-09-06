@@ -1,11 +1,19 @@
 {
   "segments": [
-    "virtual_env",
-    "username",
-    "hostname",
     "ssh",
     "cwd",
+    {
+      "type": "stdout",
+      "command": [
+        "git",
+        "config",
+        "user.name"
+      ],
+      "fg_color": 255,
+      "bg_color": 25
+    },
     "git",
+    "git_stash",
     "hg",
     "jobs"
   ]
