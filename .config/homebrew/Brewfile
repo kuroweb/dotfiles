@@ -73,6 +73,8 @@ cask "google-japanese-ime"
 cask "raycast"
 brew "jmeter"
 cask "warp"
+cask "middleclick"
+cask "dbeaver-community"
 
 #
 # Command line tools
@@ -84,6 +86,7 @@ brew "jq"
 brew "mas"
 brew "nvim"
 brew "telnet"
+brew "yamllint"
 
 #
 # scrcpy
