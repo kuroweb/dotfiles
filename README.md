@@ -15,13 +15,13 @@ cd .config/homebrew
 brew bundle
 ```
 
-差分チェック
+Macにインストール済みのパッケージとBrewfileにあるパッケージを比較して、未インストールのパッケージのリストを表示
 
 ```bash
 brew bundle cleanup
 ```
 
-Brewfileの内容で更新
+Macにインストール済みのパッケージとBrewfileにあるパッケージを比較して、未インストールのパッケージをMacから削除する
 
 ```bash
 brew bundle cleanup --force
