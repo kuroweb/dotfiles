@@ -73,9 +73,7 @@ cask "google-japanese-ime"
 cask "raycast"
 brew "jmeter"
 cask "warp"
-cask "middleclick"
 cask "dbeaver-community"
-cask "middleclick"
 
 #
 # Command line tools
