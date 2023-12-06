@@ -146,5 +146,6 @@ brew "redis"
 # font
 #
 
-tap "sanemat/font"
-brew "sanemat/font/ricty", args: ["with-powerline"]
+tap 'homebrew/cask-fonts'
+cask 'font-hackgen'
+cask 'font-hackgen-nerd'
