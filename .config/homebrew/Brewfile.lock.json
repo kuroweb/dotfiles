@@ -2091,6 +2091,12 @@
         "options": {
           "full_name": "font-hackgen-nerd"
         }
+      },
+      "docker": {
+        "version": "4.26.0,130397",
+        "options": {
+          "full_name": "docker"
+        }
       }
     }
   },

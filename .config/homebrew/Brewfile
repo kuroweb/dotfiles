@@ -56,6 +56,12 @@ brew "kind"
 brew "kubernetes-cli"
 
 #
+# docker
+#
+
+cask "docker"
+
+#
 # go
 #
 
