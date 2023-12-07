@@ -2063,7 +2063,7 @@
         }
       },
       "brave-browser": {
-        "version": "1.60.125.0",
+        "version": "1.61.100.0",
         "options": {
           "full_name": "brave-browser"
         }
@@ -2097,6 +2097,12 @@
         "options": {
           "full_name": "docker"
         }
+      },
+      "scroll-reverser": {
+        "version": "1.8.2",
+        "options": {
+          "full_name": "scroll-reverser"
+        }
       }
     }
   },
@@ -2108,7 +2114,7 @@
         "Homebrew/homebrew-core": "api",
         "CLT": "15.0.0.0.1.1694021235",
         "Xcode": "15.0",
-        "macOS": "14.1.1"
+        "macOS": "14.1.2"
       }
     }
   }

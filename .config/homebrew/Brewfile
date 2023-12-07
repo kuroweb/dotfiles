@@ -81,6 +81,7 @@ brew "jmeter"
 cask "warp"
 cask "dbeaver-community"
 cask "brave-browser"
+cask "scroll-reverser"
 
 #
 # Command line tools
