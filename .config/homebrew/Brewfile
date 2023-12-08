@@ -82,6 +82,7 @@ cask "warp"
 cask "dbeaver-community"
 cask "brave-browser"
 cask "scroll-reverser"
+cask "deepl"
 
 #
 # Command line tools
