@@ -5,4 +5,5 @@
 /.config/zsh/env.zsh
 
 # vscode
-/.config/vscode/backup
+/.config/vscode/backup/*
+!/.config/vscode/backup/.keep
