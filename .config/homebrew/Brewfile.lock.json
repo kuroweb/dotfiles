@@ -17,7 +17,7 @@
         "revision": "e2aa19e9f96a8e091df9e68814352b011cf0050f"
       },
       "homebrew/cask-fonts": {
-        "revision": "bccf1a73fddbd5ba1245d94c51912c29a4738065"
+        "revision": "60a087f8f3b4824c8a96279ec0a62346de58b6c2"
       }
     },
     "brew": {
@@ -2152,6 +2152,12 @@
         "version": "23.10.1631621",
         "options": {
           "full_name": "deepl"
+        }
+      },
+      "appcleaner": {
+        "version": "3.6.8",
+        "options": {
+          "full_name": "appcleaner"
         }
       }
     }
