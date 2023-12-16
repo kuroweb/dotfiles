@@ -84,7 +84,6 @@ cask "brave-browser"
 cask "scroll-reverser"
 cask "deepl"
 cask "appcleaner"
-cask "turbo-boost-switcher"
 
 #
 # Command line tools
