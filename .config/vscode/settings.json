@@ -10,5 +10,8 @@
     },
     "files.associations": {
         "Brewfile": "shellscript"
-    }
+    },
+    "ruby.format": false,
+    "gitlens.codeLens.authors.enabled": false,
+    "gitlens.codeLens.recentChange.enabled": false
 }
