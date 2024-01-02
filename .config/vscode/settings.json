@@ -13,5 +13,9 @@
     },
     "ruby.format": false,
     "gitlens.codeLens.authors.enabled": false,
-    "gitlens.codeLens.recentChange.enabled": false
+    "gitlens.codeLens.recentChange.enabled": false,
+    "workbench.startupEditor": "none",
+    "markdownlint.config": {
+        "MD034": false
+    }
 }
