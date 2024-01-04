@@ -18,5 +18,6 @@
     "markdownlint.config": {
         "MD034": false,
         "MD024": false
-    }
+    },
+    "git.confirmSync": false
 }
