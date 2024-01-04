@@ -85,3 +85,9 @@ function git_work() {
 	git config --global user.name $GIT_USER_WORK
 	git config --global user.email $GIT_EMAIL_WORK
 }
+
+#
+# openvpn
+#
+
+export PATH=$(brew --prefix openvpn)/sbin:$PATH

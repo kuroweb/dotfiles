@@ -152,6 +152,7 @@ brew "tree"
 cask "notunes"
 brew "redis"
 brew "ansible"
+brew "openvpn"
 
 #
 # font
