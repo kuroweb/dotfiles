@@ -3,7 +3,6 @@
 #
 
 tap "homebrew/services"
-tap "homebrew/core"
 
 #
 # ruby
@@ -85,6 +84,7 @@ cask "scroll-reverser"
 cask "deepl"
 cask "appcleaner"
 cask "tunnelblick"
+cask "google-chrome"
 
 #
 # Command line tools
