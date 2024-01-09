@@ -19,5 +19,6 @@
         "MD034": false,
         "MD024": false
     },
-    "git.confirmSync": false
+    "git.confirmSync": false,
+    "git.suggestSmartCommit": false
 }
