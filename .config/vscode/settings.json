@@ -21,5 +21,6 @@
         "MD034": false
     },
     "git.confirmSync": false,
-    "git.suggestSmartCommit": false
+    "git.suggestSmartCommit": false,
+    "ruby.intellisense": "rubyLocate"
 }
