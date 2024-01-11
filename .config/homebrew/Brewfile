@@ -73,7 +73,6 @@ brew "goenv"
 cask "iterm2"
 cask "slack"
 cask "azure-data-studio"
-cask "visual-studio-code"
 cask "google-japanese-ime"
 cask "raycast"
 brew "jmeter"
@@ -85,6 +84,13 @@ cask "deepl"
 cask "appcleaner"
 cask "tunnelblick"
 cask "google-chrome"
+
+#
+# Editor
+#
+
+cask "visual-studio-code"
+cask "cursor"
 
 #
 # Command line tools
