@@ -73,3 +73,15 @@ source ~/.zshrc
 ## Raycast
 
 import 機能で設定ファイルを読み込む
+
+## VSCode (Cursor)
+
+設定ファイルを反映する
+
+```bash
+# VSCode
+bash ~/.config/vscode/install-vscode.sh
+
+# Cursor
+bash ~/.config/vscode/install-cursor.sh
+```
