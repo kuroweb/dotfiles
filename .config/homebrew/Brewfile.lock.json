@@ -2,7 +2,7 @@
   "entries": {
     "tap": {
       "homebrew/services": {
-        "revision": "93ceb331ecd66a140cd554c1f5e58b757006c58b"
+        "revision": "33b407f77320756bf9aaf5832b6e2a5c5595634f"
       },
       "homebrew/core": {
         "revision": "3315458c17031dea53774c5867cb337187f0c003"
@@ -1229,15 +1229,15 @@
         }
       },
       "node-build": {
-        "version": "4.9.134",
+        "version": "4.9.135",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
           "files": {
             "all": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/node-build/blobs/sha256:e9958d0dd813553d0ac5cd34dff8f1fbe5fa15d2c6049e1d42db1b2b640edac8",
-              "sha256": "e9958d0dd813553d0ac5cd34dff8f1fbe5fa15d2c6049e1d42db1b2b640edac8"
+              "url": "https://ghcr.io/v2/homebrew/core/node-build/blobs/sha256:807a0b5119515e9ae114d093426fe875a0077b9947e1d926cf90604d4eb92d35",
+              "sha256": "807a0b5119515e9ae114d093426fe875a0077b9947e1d926cf90604d4eb92d35"
             }
           }
         }
@@ -2085,7 +2085,7 @@
         }
       },
       "slack": {
-        "version": "4.36.136",
+        "version": "4.36.138",
         "options": {
           "full_name": "slack"
         }
@@ -2115,7 +2115,7 @@
         }
       },
       "warp": {
-        "version": "0.2024.01.02.08.02.stable_02",
+        "version": "0.2024.01.09.08.02.stable_01",
         "options": {
           "full_name": "warp"
         }
@@ -2209,7 +2209,7 @@
   "system": {
     "macos": {
       "sonoma": {
-        "HOMEBREW_VERSION": "4.2.2",
+        "HOMEBREW_VERSION": "4.2.3",
         "HOMEBREW_PREFIX": "/opt/homebrew",
         "Homebrew/homebrew-core": "api",
         "CLT": "15.1.0.0.1.1700200546",
