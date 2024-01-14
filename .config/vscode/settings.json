@@ -9,7 +9,8 @@
         "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
     },
     "files.associations": {
-        "Brewfile": "shellscript"
+        "Brewfile": "shellscript",
+        "justfile": "shellscript"
     },
     "ruby.format": false,
     "gitlens.codeLens.authors.enabled": false,
@@ -24,5 +25,6 @@
     },
     "git.confirmSync": false,
     "git.suggestSmartCommit": false,
-    "ruby.intellisense": "rubyLocate"
+    "ruby.intellisense": "rubyLocate",
+    "editor.tabSize": 2
 }
