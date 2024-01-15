@@ -26,5 +26,8 @@
     "git.confirmSync": false,
     "git.suggestSmartCommit": false,
     "ruby.intellisense": "rubyLocate",
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
