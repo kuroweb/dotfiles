@@ -1,13 +1,36 @@
-#
-# homebrew
-#
-
+# --------------------
+# Base
+# --------------------
+# Homebrew
 tap "homebrew/services"
 
-#
-# ruby
-#
+# --------------------
+# Mac Tools
+# --------------------
+# Browser
+cask "brave-browser"
+cask "google-chrome"
 
+# IME
+cask "google-japanese-ime"
+
+# Mounty
+cask "macfuse"
+tap "gromgit/homebrew-fuse"
+brew "ntfs-3g-mac"
+cask "gromgit/fuse/mounty"
+
+# Inbox
+cask "raycast"
+cask "scroll-reverser"
+cask "deepl"
+cask "appcleaner"
+cask "iina"
+
+# --------------------
+# Dev Tools
+# --------------------
+# Ruby
 brew "icu4c"
 brew "libyaml"
 brew "openssl@3"
@@ -16,156 +39,105 @@ brew "rbenv"
 brew "readline"
 brew "ruby-build"
 
-#
-# python
-#
-
-brew "python"
-
-#
-# databases
-#
-
-brew "mysql"
-brew "postgresql@14"
-brew "sqlite"
-
-#
-# terraform
-#
-
-brew "tfenv"
-
-#
-# mounty
-#
-
-cask "macfuse"
-tap "gromgit/homebrew-fuse"
-brew "ntfs-3g-mac"
-cask "gromgit/fuse/mounty"
-
-#
-# kubernetes
-#
-
-brew "minikube"
-brew "hyperkit"
-brew "kind"
-brew "kubernetes-cli"
-
-#
-# docker
-#
-
-cask "docker"
-
-#
-# go
-#
-
-brew "goenv"
-
-#
-# Applications
-#
-
-cask "iterm2"
-cask "slack"
-cask "azure-data-studio"
-cask "google-japanese-ime"
-cask "raycast"
-brew "jmeter"
-cask "warp"
-cask "dbeaver-community"
-cask "brave-browser"
-cask "scroll-reverser"
-cask "deepl"
-cask "appcleaner"
-cask "tunnelblick"
-cask "google-chrome"
-cask "android-studio"
-cask "iina"
-
-#
-# Editor
-#
-
-cask "visual-studio-code"
-cask "cursor"
-
-#
-# Command line tools
-#
-
-brew "awscli"
-brew "direnv"
-brew "jq"
-brew "mas"
-brew "nvim"
-brew "telnet"
-brew "yamllint"
-
-#
-# scrcpy
-#
-
-brew "scrcpy"
-cask "android-platform-tools"
-
-#
 # Node.js
-#
-
 brew "nodenv"
 brew "node-build"
 brew "node"
 brew "yarn"
 brew "npm"
 
-#
-# mutagen
-#
+# Python
+brew "python"
 
-tap "mutagen-io/mutagen"
-brew "mutagen-io/mutagen/mutagen-compose"
-
-#
-# java
-#
-
+# Java
 brew "openjdk"
 
-#
-# fastly
-#
+# Go
+brew "goenv"
 
+# Editor
+cask "visual-studio-code"
+cask "cursor"
+brew "nvim"
+
+# Terminal
+cask "iterm2"
+cask "warp"
+
+# API Client
+cask "postman"
+
+# DB Client
+cask "dbeaver-community"
+
+# DB
+brew "mysql"
+brew "postgresql@14"
+brew "sqlite"
+
+# Docker
+cask "docker"
+
+# Kubernetes
+brew "minikube"
+brew "hyperkit"
+brew "kind"
+brew "kubernetes-cli"
+
+# VPN
+cask "tunnelblick"
+brew "openvpn"
+
+# Font
+tap 'homebrew/cask-fonts'
+cask 'font-hackgen'
+cask 'font-hackgen-nerd'
+
+# AWS
+brew "awscli"
+
+# Scrcpy
+brew "scrcpy"
+cask "android-platform-tools"
+
+# Fastly
 tap "fastly/tap"
 brew "fastly/tap/fastly"
 
-#
-# other
-#
+# terraform
+brew "tfenv"
 
+# Testing
+brew "jmeter"
+
+# Mutagen
+tap "mutagen-io/mutagen"
+brew "mutagen-io/mutagen/mutagen-compose"
+
+# Command line tools
+brew "direnv"
+brew "jq"
+brew "mas"
+brew "telnet"
+brew "yamllint"
+brew "tree"
+brew "wget"
+brew "just"
+
+# Inbox
 brew "gcc"
 brew "guile"
 brew "gnupg"
 brew "gnutls"
 brew "gmp"
-brew "wget"
 brew "graphviz"
-brew "just"
 brew "coreutils"
-brew "tree"
 cask "notunes"
 brew "redis"
 brew "ansible"
-brew "openvpn"
 
-#
-# font
-#
-
-tap 'homebrew/cask-fonts'
-cask 'font-hackgen'
-cask 'font-hackgen-nerd'
+# --------------------
+# Work Tools
+# --------------------
+# Message
+cask "slack"
