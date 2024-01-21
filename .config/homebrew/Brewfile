@@ -26,6 +26,7 @@ cask "scroll-reverser"
 cask "deepl"
 cask "appcleaner"
 cask "iina"
+cask "notunes"
 
 # --------------------
 # Dev Tools
@@ -132,7 +133,6 @@ brew "gnutls"
 brew "gmp"
 brew "graphviz"
 brew "coreutils"
-cask "notunes"
 brew "redis"
 brew "ansible"
 
