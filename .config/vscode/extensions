@@ -1,4 +1,3 @@
-FaroSystemAppender constructor
 aaron-bond.better-comments
 adpyke.vscode-sql-formatter
 alefragnani.project-manager
@@ -6,6 +5,7 @@ be5invis.toml
 bierner.markdown-mermaid
 bradlc.vscode-tailwindcss
 DavidAnson.vscode-markdownlint
+dbaeumer.vscode-eslint
 eamodio.gitlens
 esbenp.prettier-vscode
 GitHub.github-vscode-theme
