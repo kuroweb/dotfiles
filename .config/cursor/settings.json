@@ -1,0 +1,39 @@
+{
+    "explorer.confirmDelete": false,
+    "editor.minimap.enabled": false,
+    "workbench.colorTheme": "GitHub Dark Default",
+    "window.nativeTabs": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "explorer.confirmDragAndDrop": false,
+    "[markdown]": {
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    },
+    "files.associations": {
+        "Brewfile": "shellscript",
+        "justfile": "shellscript"
+    },
+    "ruby.format": false,
+    "gitlens.codeLens.authors.enabled": false,
+    "gitlens.codeLens.recentChange.enabled": false,
+    "workbench.startupEditor": "none",
+    "markdownlint.config": {
+        "MD024": false,
+        "MD025": false,
+        "MD033": false,
+        "MD034": false,
+        "MD040": false,
+        "MD041": false
+    },
+    "git.confirmSync": false,
+    "git.suggestSmartCommit": false,
+    "ruby.intellisense": "rubyLocate",
+    "editor.tabSize": 2,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.activityBar.orientation": "vertical"
+}

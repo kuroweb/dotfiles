@@ -3,7 +3,7 @@ SCRIPT_DIR=$(pwd)
 CURSOR_SETTING_DIR=~/Library/Application\ Support/Cursor/User
 
 # Create backup directory
-BACKUP_DIR="$SCRIPT_DIR/backup/cursor"
+BACKUP_DIR="$SCRIPT_DIR/backup"
 mkdir -p "$BACKUP_DIR"
 
 # Backup settings and keybindings

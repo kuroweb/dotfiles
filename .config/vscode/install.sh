@@ -3,7 +3,7 @@ SCRIPT_DIR=$(pwd)
 VSCODE_SETTING_DIR=~/Library/Application\ Support/Code/User
 
 # Create backup directory
-BACKUP_DIR="$SCRIPT_DIR/backup/vscode"
+BACKUP_DIR="$SCRIPT_DIR/backup"
 mkdir -p "$BACKUP_DIR"
 
 # Backup settings and keybindings

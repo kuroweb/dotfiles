@@ -77,7 +77,7 @@ brew "postgresql@14"
 brew "sqlite"
 
 # Docker
-cask "docker"
+# cask "docker"
 
 # Kubernetes
 brew "minikube"
