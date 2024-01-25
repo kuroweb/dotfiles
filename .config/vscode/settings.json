@@ -34,6 +34,5 @@
     "typescript.updateImportsOnFileMove.enabled": "always",
     "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "workbench.activityBar.orientation": "vertical"
+    }
 }
