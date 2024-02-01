@@ -17,6 +17,7 @@
     "gitlens.codeLens.recentChange.enabled": false,
     "workbench.startupEditor": "none",
     "markdownlint.config": {
+        "MD001": false,
         "MD024": false,
         "MD025": false,
         "MD033": false,
