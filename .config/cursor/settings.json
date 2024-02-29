@@ -37,5 +37,6 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "workbench.activityBar.orientation": "vertical",
-    "gitlens.hovers.currentLine.enabled": false
+    "gitlens.hovers.currentLine.enabled": false,
+    "javascript.updateImportsOnFileMove.enabled": "always"
 }
