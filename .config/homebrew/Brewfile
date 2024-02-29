@@ -10,6 +10,7 @@ tap "homebrew/services"
 # Browser
 cask "brave-browser"
 cask "google-chrome"
+cask "microsoft-edge"
 
 # IME
 cask "google-japanese-ime"
@@ -77,7 +78,7 @@ brew "postgresql@14"
 brew "sqlite"
 
 # Docker
-# cask "docker"
+cask "docker"
 
 # Kubernetes
 brew "minikube"
