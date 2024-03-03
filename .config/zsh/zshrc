@@ -67,6 +67,16 @@ PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
 
 #
+# python
+#
+
+export PYENV_ROOT="$HOME/.pyenv/shims"
+export PATH="$PYENV_ROOT:$PATH"
+export PIPENV_PYTHON="$PYENV_ROOT/python"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+
+#
 # docker
 #
 

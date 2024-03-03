@@ -38,5 +38,10 @@
     },
     "workbench.activityBar.orientation": "vertical",
     "gitlens.hovers.currentLine.enabled": false,
-    "javascript.updateImportsOnFileMove.enabled": "always"
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "window.commandCenter": false,
+    "workbench.layoutControl.enabled": false
 }

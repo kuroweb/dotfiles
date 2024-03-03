@@ -3,6 +3,7 @@
 # --------------------
 # Homebrew
 tap "homebrew/services"
+tap "homebrew/cask"
 
 # --------------------
 # Mac Tools
@@ -49,7 +50,7 @@ brew "yarn"
 brew "npm"
 
 # Python
-brew "python"
+brew "pyenv"
 
 # Java
 brew "openjdk"
