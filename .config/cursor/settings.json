@@ -43,5 +43,8 @@
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "window.commandCenter": false,
-    "workbench.layoutControl.enabled": false
+    "workbench.layoutControl.enabled": false,
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    }
 }
