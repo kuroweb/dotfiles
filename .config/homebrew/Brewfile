@@ -3,7 +3,6 @@
 # --------------------
 # Homebrew
 tap "homebrew/services"
-tap "homebrew/cask"
 
 # --------------------
 # Mac Tools
