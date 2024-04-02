@@ -119,6 +119,7 @@ brew "mutagen-io/mutagen/mutagen-compose"
 # Command line tools
 brew "direnv"
 brew "jq"
+brew "yq"
 brew "mas"
 brew "telnet"
 brew "yamllint"

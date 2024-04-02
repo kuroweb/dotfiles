@@ -44,7 +44,11 @@
     },
     "window.commandCenter": false,
     "workbench.layoutControl.enabled": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
     }
 }
