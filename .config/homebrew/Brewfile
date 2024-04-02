@@ -98,6 +98,9 @@ cask 'font-hackgen-nerd'
 # AWS
 brew "awscli"
 
+# GCP
+cask "google-cloud-sdk"
+
 # Scrcpy
 brew "scrcpy"
 cask "android-platform-tools"
