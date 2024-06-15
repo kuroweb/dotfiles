@@ -80,12 +80,6 @@ brew "sqlite"
 # Docker
 cask "docker"
 
-# Kubernetes
-brew "minikube"
-brew "hyperkit"
-brew "kind"
-brew "kubernetes-cli"
-
 # VPN
 cask "tunnelblick"
 brew "openvpn"
@@ -97,6 +91,9 @@ cask 'font-hackgen-nerd'
 
 # AWS
 brew "awscli"
+
+# GCP
+cask "google-cloud-sdk"
 
 # Scrcpy
 brew "scrcpy"
