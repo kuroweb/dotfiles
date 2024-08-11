@@ -18,6 +18,7 @@
     "workbench.startupEditor": "none",
     "markdownlint.config": {
         "MD001": false,
+        "MD014": false,
         "MD024": false,
         "MD025": false,
         "MD033": false,
@@ -35,5 +36,17 @@
     "typescript.updateImportsOnFileMove.enabled": "always",
     "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+    "window.commandCenter": false,
+    "workbench.layoutControl.enabled": false,
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[xml]": {
+        "editor.defaultFormatter": "DotJoshJohnson.xml"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "explorer.confirmPasteNative": false
 }
