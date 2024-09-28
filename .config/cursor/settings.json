@@ -52,4 +52,5 @@
     "[yaml]": {
         "editor.defaultFormatter": "redhat.vscode-yaml"
     },
+    "editor.detectIndentation": false,
 }
