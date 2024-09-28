@@ -80,8 +80,10 @@ import 機能で設定ファイルを読み込む
 
 ```bash
 # VSCode
-bash ~/.config/vscode/install-vscode.sh
+cd ~/dotfiles/.config/vscode
+bash install.sh
 
 # Cursor
-bash ~/.config/vscode/install-cursor.sh
+cd ~/dotfiles/.config/cursor
+bash install.sh
 ```
