@@ -2,15 +2,15 @@
 .DS_Store
 
 # zsh
-.config/zsh/env.zsh
+zsh/env.zsh
 
 # vscode
-.config/vscode/backup/*
-!.config/vscode/backup/.keep
+vscode/backup/*
+!vscode/backup/.keep
 
 # cursor
-.config/cursor/backup/*
-!.config/cursor/backup/.keep
+cursor/backup/*
+!cursor/backup/.keep
 
 # homebrew
-.config/homebrew/Brewfile.lock.json
+homebrew/Brewfile.lock.json
