@@ -12,3 +12,5 @@
 .config/cursor/backup/*
 !.config/cursor/backup/.keep
 
+# homebrew
+.config/homebrew/Brewfile.lock.json
