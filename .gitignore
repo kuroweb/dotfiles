@@ -2,12 +2,13 @@
 .DS_Store
 
 # zsh
-/.config/zsh/env.zsh
+.config/zsh/env.zsh
 
 # vscode
-/.config/vscode/backup/*
-!/.config/vscode/backup/.keep
+.config/vscode/backup/*
+!.config/vscode/backup/.keep
 
 # cursor
-/.config/cursor/backup/*
-!/.config/cursor/backup/.keep
+.config/cursor/backup/*
+!.config/cursor/backup/.keep
+
