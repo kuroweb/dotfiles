@@ -10,9 +10,9 @@
     },
     "files.associations": {
         "Brewfile": "shellscript",
-        "justfile": "shellscript"
+        "justfile": "shellscript",
+        "*.erb": "erb"
     },
-    "ruby.format": false,
     "gitlens.codeLens.authors.enabled": false,
     "gitlens.codeLens.recentChange.enabled": false,
     "workbench.startupEditor": "none",
@@ -28,7 +28,6 @@
     },
     "git.confirmSync": false,
     "git.suggestSmartCommit": false,
-    "ruby.intellisense": "rubyLocate",
     "editor.tabSize": 2,
     "[typescriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -48,5 +47,20 @@
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
-    "explorer.confirmPasteNative": false
+    "explorer.confirmPasteNative": false,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "gitlens.views.scm.grouped.views": {
+        "commits": true,
+        "branches": true,
+        "remotes": true,
+        "stashes": true,
+        "tags": true,
+        "worktrees": true,
+        "contributors": true,
+        "repositories": false,
+        "searchAndCompare": true,
+        "launchpad": false
+    },
 }
