@@ -77,9 +77,6 @@ brew "mysql"
 brew "postgresql@14"
 brew "sqlite"
 
-# Docker
-cask "docker"
-
 # VPN
 cask "tunnelblick"
 brew "openvpn"
