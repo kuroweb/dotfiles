@@ -3,6 +3,7 @@
 
 # zsh
 zsh/env.zsh
+zsh/work.zsh
 
 # vscode
 vscode/backup/*

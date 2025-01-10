@@ -1,10 +1,13 @@
 aaron-bond.better-comments
 adpyke.vscode-sql-formatter
 alefragnani.project-manager
+aswinkumar863.smarty-template-support
 be5invis.toml
 bierner.markdown-mermaid
 bradlc.vscode-tailwindcss
+castwide.solargraph
 christian-kohler.path-intellisense
+craigmaslowski.erb
 davidanson.vscode-markdownlint
 dbaeumer.vscode-eslint
 dotjoshjohnson.xml
@@ -37,12 +40,10 @@ ms-vscode.remote-server
 oderwat.indent-rainbow
 pkief.material-icon-theme
 qhoekman.language-plantuml
-rebornix.ruby
 redhat.vscode-yaml
 shardulm94.trailing-spaces
 tyriar.sort-lines
 unional.vscode-sort-package-json
 well-ar.plantuml
-wingrunr21.vscode-ruby
 xdebug.php-debug
 yzhang.markdown-all-in-one
