@@ -63,4 +63,5 @@
         "searchAndCompare": true,
         "launchpad": false
     },
+    "ruby.rubocop.onSave": false,
 }
