@@ -63,5 +63,7 @@
         "searchAndCompare": true,
         "launchpad": false
     },
-    "ruby.rubocop.onSave": false,
+    "[ruby]": {
+        "editor.defaultFormatter": "misogi.ruby-rubocop"
+    },
 }
