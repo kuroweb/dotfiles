@@ -3,7 +3,7 @@
 BASE_PATH=$(dirname "$0")
 
 cd "$BASE_PATH"
-source ../.env
+source ../env
 
 export RBENV_VERSION=$RUBY_VERSION
 eval "$(rbenv init -)"

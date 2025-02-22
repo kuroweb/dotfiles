@@ -103,3 +103,7 @@
   cd ~/dotfiles/cursor
   bash install.sh
   ```
+
+## Ruby
+
+- `ruby/*`配下に目的ごとにディレクトリを切ってgemをインストールできるようにしている
