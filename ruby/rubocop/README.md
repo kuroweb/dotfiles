@@ -9,6 +9,7 @@
 
 ## Required
 
+- rbenv
 - VSCode Extension:
   - [misogi.ruby-rubocop](https://marketplace.visualstudio.com/items?itemName=misogi.ruby-rubocop)
 
