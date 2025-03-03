@@ -15,19 +15,13 @@ cask "microsoft-edge"
 # IME
 cask "google-japanese-ime"
 
-# Mounty
-cask "macfuse"
-tap "gromgit/homebrew-fuse"
-brew "ntfs-3g-mac"
-cask "gromgit/fuse/mounty"
-
 # Inbox
 cask "raycast"
-cask "scroll-reverser"
 cask "deepl"
 cask "appcleaner"
 cask "iina"
 cask "notunes"
+cask "linearmouse"
 
 # --------------------
 # Dev Tools
