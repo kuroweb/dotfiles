@@ -1,0 +1,16 @@
+# frozen_string_literal: true
+
+source 'https://rubygems.org'
+
+ruby ENV.fetch('RUBY_VERSION')
+
+gem 'ruby-lsp'
+gem 'ruby-lsp-rails'
+gem 'ruby-lsp-rspec'
+gem 'rubocop'
+gem 'rubocop-packaging'
+gem 'rubocop-performance'
+gem 'rubocop-rails'
+gem 'rubocop-rspec'
+gem 'rubocop-shopify'
+gem 'rubocop-thread_safety'
