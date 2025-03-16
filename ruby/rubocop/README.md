@@ -18,7 +18,7 @@
 - `env`ファイルでバージョン調整
 
   ```bash
-  $ vi env
+  $ vi env.sh
   ```
 
 - gemをインストール
