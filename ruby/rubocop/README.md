@@ -39,4 +39,3 @@
       "editor.defaultFormatter": "misogi.ruby-rubocop"
     }
   }
-  ```

@@ -107,3 +107,6 @@
 ## Ruby
 
 - `ruby/*`配下に目的ごとにディレクトリを切ってgemをインストールできるようにしている
+  - [ruby-lsp](ruby/ruby-lsp/README.md)
+  - [rubocop](ruby/rubocop/README.md)
+  - [solargraph](ruby/solargraph/README.md)
