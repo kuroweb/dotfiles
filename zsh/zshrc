@@ -95,6 +95,11 @@ function git_private() {
 	git config --global user.email $GIT_EMAIL_PRIVATE
 }
 
+function git_private2() {
+	git config --global user.name $GIT_USER_PRIVATE2
+	git config --global user.email $GIT_EMAIL_PRIVATE2
+}
+
 function git_work() {
 	git config --global user.name $GIT_USER_WORK
 	git config --global user.email $GIT_EMAIL_WORK
