@@ -1,2 +1,1 @@
 export RUBY_VERSION=2.7.2
-export RUBOCOP_VERSION=0.34.2
