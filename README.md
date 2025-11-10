@@ -109,9 +109,9 @@
 - プロジェクトで共通のCursorルールを使用する場合、プロジェクトの`.cursor/rules`配下に`common`というシンボリックリンクを作成する
 
   ```bash
-  cd path/to/project
+  cd ~/path/to/project
   mkdir -p .cursor/rules
-  ln -sf path/to/dotfiles/cursor_rules .cursor/rules/common
+  ln -sf ~/path/to/dotfiles/cursor_rules .cursor/rules/common
   ```
 
 ## Ruby
