@@ -1,0 +1,86 @@
+---
+description: テストファイルを編集する際に実行してください
+globs: ["**/*_spec.rb", "**/spec/**/*.rb"]
+triggers: ["テスト", "spec", "rspec", "並列実行", "flaky"]
+---
+
+# 並列実行時のテストデータ設計
+
+## 原則
+
+- **データベースにコミットされるデータソース（`create`で作成されたレコード）を`before`ブロックで変更すると、CIでの並列実行時にflakyになる**
+- メモリ上のデータ（`build`や変数）であれば、`before`ブロックで変更しても問題ない
+
+## 理由
+
+1. **共有リソースの問題**
+   - `let!`や`let`、トップレベルで`create`したDBレコードは、そのスコープ内の全テストケースで共有される
+   - 並列実行時に複数のテストケースが同じDBレコードを参照・変更する
+
+2. **レースコンディションの発生**
+   - 一方のテストケースの`before`ブロックでデータを変更すると、同時に実行されている別のテストケースに影響する
+   - テストケースAが`order.update(...)`を実行中に、テストケースBが同じ`order`を参照すると、期待と異なる状態になる
+
+3. **実行順序への依存**
+   - テストの実行順序によって結果が変わる（flaky）
+   - 同じテストが成功したり失敗したりする
+
+4. **メモリ上のデータは安全な理由**
+   - `build`で作成されたオブジェクトはDBにコミットされないため、他のテストケースに影響しない
+   - 変数は各テストケースのメモリ空間に独立して存在する
+
+## 問題のあるパターン
+
+```ruby
+# パターン1: let!で作成したDBレコードを変更
+let!(:order) { create(:order) }  # DBにコミットされる → 全テストケースで共有
+
+context '特定の状態' do
+  before do
+    order.update_attributes(...)  # ❌ DBレコードを変更 → 並列実行時にflaky
+    order.item.delete             # ❌ DBレコードを削除 → 並列実行時にflaky
+  end
+end
+
+# パターン2: letで作成したDBレコードを変更
+let(:order) { create(:order) }  # DBにコミットされる → 全テストケースで共有
+
+context '特定の状態' do
+  before do
+    order.update_attributes(...)  # ❌ DBレコードを変更 → 並列実行時にflaky
+  end
+end
+
+# パターン3: トップレベルで作成したDBレコードを変更
+order = create(:order)  # DBにコミットされる
+
+context '特定の状態' do
+  before do
+    order.update_attributes(...)  # ❌ DBレコードを変更 → 並列実行時にflaky
+  end
+end
+```
+
+## 推奨パターン
+
+```ruby
+# パターン1: 各テストケースで独立したDBレコードを作成
+let!(:order) { create(:order) }
+let!(:order_without_item) { create(:order, item: nil) }
+
+# パターン2: 目的ごとにlet!を定義（そのcontext内でのみ有効）
+context '特定の状態' do
+  let!(:order) { create(:order, item: nil) }
+end
+
+# パターン3: メモリ上のデータは変更してもOK
+let(:order) { build(:order) }  # buildなのでDBにコミットされない
+before { order.attributes = {...} }  # ✅ メモリ上の変更なので問題ない
+```
+
+## チェックポイント
+
+- [ ] `let!`や`let`、トップレベルで`create`したDBレコードを`before`ブロックで変更していないか
+- [ ] データ削除や更新を行うテストケースで独立したDBレコードを作成しているか
+- [ ] 並列実行時に同じDBレコードを複数のテストケースが参照・変更していないか
+- [ ] 共有されるDBレコードの状態を変更するテストケースがないか
