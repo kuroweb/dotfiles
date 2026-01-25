@@ -10,7 +10,7 @@ TARGET_DIR="$HOME/.cursor"
 echo "Creating global Cursor symlinks..."
 
 # Create symlinks for each directory
-for dir in rules skills agents commands contexts hooks; do
+for dir in rules skills agents commands contexts; do
   if [ -d "$DOTFILES_CURSOR_DIR/$dir" ]; then
     if [ -e "$TARGET_DIR/$dir" ] && [ ! -L "$TARGET_DIR/$dir" ]; then
       echo "Warning: $TARGET_DIR/$dir exists and is not a symlink. Skipping."
