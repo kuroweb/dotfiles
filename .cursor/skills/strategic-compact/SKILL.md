@@ -40,7 +40,7 @@ description: 任意の自動圧縮ではなく、タスクフェーズを通じ�
       "matcher": "tool == \"Edit\" || tool == \"Write\"",
       "hooks": [{
         "type": "command",
-        "command": "~/.claude/skills/strategic-compact/suggest-compact.sh"
+        "command": ".cursor/skills/strategic-compact/suggest-compact.sh"
       }]
     }]
   }

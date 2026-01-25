@@ -113,4 +113,4 @@ plannerエージェントは以下を行います:
 ## 関連エージェント
 
 このコマンドは以下にある`planner`エージェントを呼び出します:
-`~/.claude/agents/planner.md`
+`~/.cursor/agents/planner.md`

@@ -13,7 +13,7 @@ Claude Codeセッション終了時に自動的にセッションを評価し、
 
 1. **セッション評価**: セッションに十分なメッセージがあるかチェック（デフォルト: 10以上）
 2. **パターン検出**: セッションから抽出可能なパターンを特定
-3. **スキル抽出**: 有用なパターンを `~/.claude/skills/learned/` に保存
+3. **スキル抽出**: 有用なパターンを `.cursor/skills/learned/` に保存
 
 ## 設定
 
@@ -24,7 +24,7 @@ Claude Codeセッション終了時に自動的にセッションを評価し、
   "min_session_length": 10,
   "extraction_threshold": "medium",
   "auto_approve": false,
-  "learned_skills_path": "~/.claude/skills/learned/",
+  "learned_skills_path": ".cursor/skills/learned/",
   "patterns_to_detect": [
     "error_resolution",
     "user_corrections",
@@ -61,7 +61,7 @@ Claude Codeセッション終了時に自動的にセッションを評価し、
       "matcher": "*",
       "hooks": [{
         "type": "command",
-        "command": "~/.claude/skills/continuous-learning/evaluate-session.sh"
+        "command": ".cursor/skills/continuous-learning/evaluate-session.sh"
       }]
     }]
   }

@@ -322,9 +322,9 @@ REDフェーズをスキップしないでください。テストの前にコ�
 ## 関連エージェント
 
 このコマンドは以下にある`tdd-guide`エージェントを呼び出します:
-`~/.claude/agents/tdd-guide.md`
+`.cursor/agents/tdd-guide.md`
 
 そして以下にある`tdd-workflow`スキルを参照できます:
-`~/.claude/skills/tdd-workflow/`
+`.cursor/skills/tdd-workflow/`
 
 

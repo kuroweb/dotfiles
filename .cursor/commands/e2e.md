@@ -346,7 +346,7 @@ PMXでは、これらのE2Eテストを優先してください:
 ## 関連エージェント
 
 このコマンドは以下にある`e2e-runner`エージェントを呼び出します:
-`~/.claude/agents/e2e-runner.md`
+`~/.cursor/agents/e2e-runner.md`
 
 ## クイックコマンド
 
