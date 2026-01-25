@@ -104,21 +104,17 @@
   bash install.sh
   ```
 
-## Cursor Rules / Commands
-
-- プロジェクトで共通のCursorルールを使用する場合、プロジェクトの`.cursor`配下にシンボリックリンクを作成する
-
-  ```bash
-  cd ~/path/to/project
-  mkdir -p .cursor/rules
-  mkdir -p .cursor/commands
-  ln -sf ~/path/to/dotfiles/.cursor/rules .cursor/rules/common
-  ln -sf ~/path/to/dotfiles/.cursor/commands .cursor/commands/common
-  ```
-
 ## Ruby
 
 - `ruby/*`配下に目的ごとにディレクトリを切ってgemをインストールできるようにしている
   - [ruby-lsp](ruby/ruby-lsp/README.md)
   - [rubocop](ruby/rubocop/README.md)
   - [solargraph](ruby/solargraph/README.md)
+
+## Cursor
+
+- プロジェクトで共通のCursor設定を使用する場合、以下のスクリプトを実行する
+
+  ```bash
+  bash ~/path/to/dotfiles/.cursor/install.sh ~/path/to/project
+  ```
