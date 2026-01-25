@@ -1,30 +1,24 @@
 #!/bin/bash
-# Usage: bash install.sh ~/path/to/project
+# Usage: bash install-global.sh
+# Creates symlinks for global Cursor configuration in ~/.cursor/
 
 set -e
 
-if [ -z "$1" ]; then
-  echo "Usage: $0 <project-path>"
-  exit 1
-fi
-
-PROJECT_PATH="$1"
 DOTFILES_CURSOR_DIR="$(cd "$(dirname "$0")" && pwd)"
+TARGET_DIR="$HOME/.cursor"
 
-if [ ! -d "$PROJECT_PATH" ]; then
-  echo "Error: Directory '$PROJECT_PATH' does not exist"
-  exit 1
-fi
+echo "Creating global Cursor symlinks..."
 
-cd "$PROJECT_PATH"
+# Create symlinks for each directory
+for dir in rules skills agents commands contexts hooks; do
+  if [ -d "$DOTFILES_CURSOR_DIR/$dir" ]; then
+    if [ -e "$TARGET_DIR/$dir" ] && [ ! -L "$TARGET_DIR/$dir" ]; then
+      echo "Warning: $TARGET_DIR/$dir exists and is not a symlink. Skipping."
+    else
+      ln -sfn "$DOTFILES_CURSOR_DIR/$dir" "$TARGET_DIR/$dir"
+      echo "Linked: $TARGET_DIR/$dir -> $DOTFILES_CURSOR_DIR/$dir"
+    fi
+  fi
+done
 
-mkdir -p .cursor/rules .cursor/commands .cursor/skills .cursor/agents .cursor/contexts .cursor/hooks
-
-ln -sf "$DOTFILES_CURSOR_DIR/rules" .cursor/rules/common
-ln -sf "$DOTFILES_CURSOR_DIR/commands" .cursor/commands/common
-ln -sf "$DOTFILES_CURSOR_DIR/skills" .cursor/skills/common
-ln -sf "$DOTFILES_CURSOR_DIR/agents" .cursor/agents/common
-ln -sf "$DOTFILES_CURSOR_DIR/contexts" .cursor/contexts/common
-ln -sf "$DOTFILES_CURSOR_DIR/hooks" .cursor/hooks/common
-
-echo "Symlinks created in $PROJECT_PATH/.cursor/"
+echo "Done!"

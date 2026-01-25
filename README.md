@@ -113,8 +113,8 @@
 
 ## Cursor
 
-- プロジェクトで共通のCursor設定を使用する場合、以下のスクリプトを実行する
+- `~/.cursor/` にシンボリンクを作成し、全プロジェクトで共通設定を使用する
 
   ```bash
-  bash ~/path/to/dotfiles/.cursor/install.sh ~/path/to/project
+  bash ~/path/to/dotfiles/.cursor/install.sh
   ```
