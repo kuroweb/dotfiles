@@ -15,7 +15,3 @@ cursor/backup/*
 
 # homebrew
 homebrew/Brewfile.lock.json
-
-# cursor/rules
-.cursor/rules/*
-!.cursor/rules/.keep

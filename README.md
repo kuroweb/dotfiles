@@ -104,14 +104,16 @@
   bash install.sh
   ```
 
-## Cursor Rules
+## Cursor Rules / Commands
 
-- プロジェクトで共通のCursorルールを使用する場合、プロジェクトの`.cursor/rules`配下に`common`というシンボリックリンクを作成する
+- プロジェクトで共通のCursorルールを使用する場合、プロジェクトの`.cursor`配下にシンボリックリンクを作成する
 
   ```bash
   cd ~/path/to/project
   mkdir -p .cursor/rules
-  ln -sf ~/path/to/dotfiles/cursor_rules .cursor/rules/common
+  mkdir -p .cursor/commands
+  ln -sf ~/path/to/dotfiles/.cursor/rules .cursor/rules/common
+  ln -sf ~/path/to/dotfiles/.cursor/commands .cursor/commands/common
   ```
 
 ## Ruby
