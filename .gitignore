@@ -15,3 +15,9 @@ cursor/backup/*
 
 # homebrew
 homebrew/Brewfile.lock.json
+
+# agents
+agents/.cursor
+agents/.claude
+agents/.github
+agents/.codex

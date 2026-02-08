@@ -111,10 +111,12 @@
   - [rubocop](ruby/rubocop/README.md)
   - [solargraph](ruby/solargraph/README.md)
 
-## Cursor
+## AI エージェント共通設定
 
-- `~/.cursor/` にシンボリンクを作成し、全プロジェクトで共通設定を使用する
+- ソースは **`agents/`** 配下の `rulesync.jsonc` と `.rulesync/`。[Rulesync](https://github.com/dyoshikawa/rulesync) で Cursor / Claude Code / Copilot / Codex CLI 向けに生成する
+- 事前に Rulesync を入れる: `npm install -g rulesync` または `brew install rulesync`
+- `agents/install.sh` を実行すると、generate のあと `~/.cursor` と `~/.claude` へシンボリックリンクを張る
 
   ```bash
-  bash ~/path/to/dotfiles/.cursor/install.sh
+  bash ~/dotfiles/agents/install.sh
   ```

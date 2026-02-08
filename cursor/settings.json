@@ -54,4 +54,9 @@
         "editor.defaultFormatter": "redhat.vscode-yaml"
     },
     "editor.detectIndentation": false,
+    "cursor.composer.shouldAutoAcceptDiffs": false,
+    "window.confirmSaveUntitledWorkspace": false,
+    "rubyLsp.enabledFeatures": {
+      "codeLens": false
+    }
 }
