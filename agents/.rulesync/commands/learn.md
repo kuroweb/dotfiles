@@ -38,7 +38,7 @@ description: 'セッションから再利用可能なパターンをスキルと
 
 ## 出力形式
 
-`.cursor/skills/learned/[pattern-name].md` にスキルファイルを作成:
+`skills/learned/[pattern-name].md` にスキルファイルを作成:
 
 ```markdown
 # [説明的なパターン名]
@@ -65,7 +65,7 @@ description: 'セッションから再利用可能なパターンをスキルと
 2. 最も価値がある/再利用可能な洞察を特定
 3. スキルファイルのドラフトを作成
 4. 保存前にユーザーの確認を求める
-5. `.cursor/skills/learned/` に保存
+5. `skills/learned/` に保存
 
 ## 注意事項
 

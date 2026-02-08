@@ -19,11 +19,9 @@ cursor:
 
 ### 0. SKILL読み込み（必須・最初に実行）
 
-**調査を開始する前に、必ず以下のSKILLをReadツールで読み込むこと:**
+**調査を開始する前に、必ず以下のスキルを Read ツールで読み込むこと:**
 
-```
-.cursor/skills/investigation-report/SKILL.md
-```
+- `skills/investigation-report/SKILL.md`
 
 このSKILLには以下が含まれる:
 
@@ -137,4 +135,4 @@ SKILL読み込み後、調査タイプに応じた出力形式を決定:
 
 **覚えておいてください**: 優れた調査レポートは、読者が迅速に理解し、自信を持って意思決定できることを可能にします。データに基づき、構造化され、アクション指向のレポートを心がけてください。
 
-プロジェクトの`.cursor/rules/`または`.cursor/skills/`に基づいてカスタマイズ。特に `.cursor/skills/investigation-report/` を参照。
+プロジェクトのルール・スキルに基づいてカスタマイズ。特に `skills/investigation-report/` を参照。

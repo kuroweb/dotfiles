@@ -83,7 +83,6 @@ code-investigatorエージェントは以下を行います:
 - `/tdd` - テスト駆動で修正を実装
 - `/code-review` - 修正案のセキュリティレビュー
 
-## 関連ファイル
+## 関連エージェント・スキル
 
-- エージェント: `.cursor/agents/code-investigator.md`
-- スキル: `.cursor/skills/investigation-report/`
+このコマンドは `agents/code-investigator.md` サブエージェントと `skills/investigation-report/` スキルを使用します。
