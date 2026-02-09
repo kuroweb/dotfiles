@@ -1,12 +1,30 @@
 #!/bin/bash
-# Usage: bash /path/to/dotfiles/agents/install.sh
-# Runs rulesync generate in agents/ then creates symlinks for ~/.cursor/ (and optionally ~/.claude/)
+# 使い方: bash agents/install.sh [cursor|claude]
+# rulesync generate のあと、agents/.cursor と .claude を ~/.cursor / ~/.claude にシンボリックリンクする。
+# 引数で cursor または claude を指定するとその一方だけ行う。
 
 set -e
 
 AGENTS_DIR="$(cd "$(dirname "$0")" && pwd)"
-TARGET_CURSOR="$HOME/.cursor"
-TARGET_CLAUDE="$HOME/.claude"
+
+link_agent_dir() {
+  local name="$1"
+  local src="$AGENTS_DIR/.$name"
+  local target="$HOME/.$name"
+  echo "Creating global $name symlinks..."
+  mkdir -p "$target"
+  for item in "$src"/*; do
+    [ -e "$item" ] || continue
+    local name_ent="$(basename "$item")"
+    if [ -e "$target/$name_ent" ] && [ ! -L "$target/$name_ent" ]; then
+      echo "Warning: $target/$name_ent exists and is not a symlink. Skipping."
+    else
+      ln -sfn "$item" "$target/$name_ent"
+      echo "Linked: $target/$name_ent -> $item"
+    fi
+  done
+  echo "$name install done."
+}
 
 echo "Running rulesync generate in $AGENTS_DIR..."
 (cd "$AGENTS_DIR" && rulesync generate) || {
@@ -14,34 +32,14 @@ echo "Running rulesync generate in $AGENTS_DIR..."
   exit 1
 }
 
-echo "Creating global Cursor symlinks..."
-mkdir -p "$TARGET_CURSOR"
-if [ -d "$AGENTS_DIR/.cursor" ]; then
-  for dir in "$AGENTS_DIR/.cursor"/*; do
-    [ -d "$dir" ] || continue
-    name="$(basename "$dir")"
-    if [ -e "$TARGET_CURSOR/$name" ] && [ ! -L "$TARGET_CURSOR/$name" ]; then
-      echo "Warning: $TARGET_CURSOR/$name exists and is not a symlink. Skipping."
-    else
-      ln -sfn "$AGENTS_DIR/.cursor/$name" "$TARGET_CURSOR/$name"
-      echo "Linked: $TARGET_CURSOR/$name -> $AGENTS_DIR/.cursor/$name"
-    fi
-  done
-fi
-
-echo "Creating global Claude symlinks..."
-mkdir -p "$TARGET_CLAUDE"
-if [ -d "$AGENTS_DIR/.claude" ]; then
-  for item in "$AGENTS_DIR/.claude"/*; do
-    [ -e "$item" ] || continue
-    name="$(basename "$item")"
-    if [ -e "$TARGET_CLAUDE/$name" ] && [ ! -L "$TARGET_CLAUDE/$name" ]; then
-      echo "Warning: $TARGET_CLAUDE/$name exists and is not a symlink. Skipping."
-    else
-      ln -sfn "$item" "$TARGET_CLAUDE/$name"
-      echo "Linked: $TARGET_CLAUDE/$name -> $item"
-    fi
-  done
+if [ -n "${1:-}" ]; then
+  case "$1" in
+    cursor|claude) link_agent_dir "$1" ;;
+    *) echo "Usage: $0 [cursor|claude]" >&2; exit 1 ;;
+  esac
+else
+  link_agent_dir cursor
+  link_agent_dir claude
 fi
 
 echo "Done!"
