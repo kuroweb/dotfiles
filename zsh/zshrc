@@ -17,10 +17,6 @@ if [[ -f $zsh_path/env.zsh ]]; then
   source $zsh_path/env.zsh
 fi
 
-if [[ -f $zsh_path/work.zsh ]]; then
-  source $zsh_path/work.zsh
-fi
-
 source $zsh_path/prompt.zsh
 
 #
@@ -106,23 +102,6 @@ function git_private2() {
 	git config --global user.name $GIT_USER_PRIVATE2
 	git config --global user.email $GIT_EMAIL_PRIVATE2
 }
-
-function git_work() {
-	git config --global user.name $GIT_USER_WORK
-	git config --global user.email $GIT_EMAIL_WORK
-}
-
-auto_switch_git() {
-  if [[ $PWD == "$HOME/Private" || $PWD == "$HOME/Private/"* ]]; then
-    git_private
-  else
-    git_work
-  fi
-}
-
-autoload -Uz add-zsh-hook
-add-zsh-hook chpwd auto_switch_git
-auto_switch_git
 
 #
 # openvpn

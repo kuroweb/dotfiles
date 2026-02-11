@@ -58,5 +58,7 @@
     "window.confirmSaveUntitledWorkspace": false,
     "rubyLsp.enabledFeatures": {
       "codeLens": false
-    }
+    },
+    "claudeCode.selectedModel": "haiku",
+    "claudeCode.useTerminal": true
 }
