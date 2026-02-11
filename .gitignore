@@ -24,3 +24,6 @@ agents/.claude/*
 !agents/.claude/settings.local.json
 !agents/.claude/scripts/
 !agents/.claude/scripts/**
+
+.claude
+.cursor
