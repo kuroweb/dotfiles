@@ -1,5 +1,5 @@
 #!/bin/sh
-SCRIPT_DIR=$(pwd)
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 VSCODE_SETTING_DIR=~/Library/Application\ Support/Code/User
 
 # Create backup directory
@@ -19,7 +19,7 @@ ln -sf "$SCRIPT_DIR/keybindings.json" "${VSCODE_SETTING_DIR}/keybindings.json"
 while read -r line
 do
   code --install-extension "$line"
-done < ./extensions
+done < "$SCRIPT_DIR/extensions"
 
 # Update list of installed extensions
-code --list-extensions > extensions
+code --list-extensions > "$SCRIPT_DIR/extensions"

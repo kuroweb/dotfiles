@@ -127,12 +127,10 @@ source ~/.zshrc
 
 ```bash
 # VSCode
-cd ~/dotfiles/vscode
-bash install.sh
+bash ~/dotfiles/vscode/install.sh
 
 # Cursor
-cd ~/dotfiles/cursor
-bash install.sh
+bash ~/dotfiles/cursor/install.sh
 ```
 
 ### Raycast
