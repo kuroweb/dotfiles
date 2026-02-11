@@ -10,6 +10,7 @@ christian-kohler.path-intellisense
 craigmaslowski.erb
 davidanson.vscode-markdownlint
 dbaeumer.vscode-eslint
+docker.docker
 dotjoshjohnson.xml
 eamodio.gitlens
 esbenp.prettier-vscode
@@ -27,6 +28,7 @@ mekusuri.jsonl-tool
 mhutchie.git-graph
 misogi.ruby-rubocop
 mosapride.zenkaku
+ms-azuretools.vscode-containers
 ms-azuretools.vscode-docker
 ms-ceintl.vscode-language-pack-ja
 ms-vscode-remote.remote-containers
@@ -40,10 +42,12 @@ ms-vscode.remote-server
 oderwat.indent-rainbow
 pkief.material-icon-theme
 qhoekman.language-plantuml
+rebornix.ruby
 redhat.vscode-yaml
 shardulm94.trailing-spaces
 tyriar.sort-lines
 unional.vscode-sort-package-json
 well-ar.plantuml
+wingrunr21.vscode-ruby
 xdebug.php-debug
 yzhang.markdown-all-in-one
