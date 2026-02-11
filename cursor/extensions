@@ -1,6 +1,7 @@
 aaron-bond.better-comments
 adpyke.vscode-sql-formatter
 alefragnani.project-manager
+anthropic.claude-code
 be5invis.toml
 bierner.markdown-mermaid
 bradlc.vscode-tailwindcss
@@ -18,8 +19,8 @@ jebbs.plantuml
 kaiwood.endwise
 mechatroner.rainbow-csv
 mhutchie.git-graph
-misogi.ruby-rubocop
 mosapride.zenkaku
+ms-azuretools.vscode-containers
 ms-azuretools.vscode-docker
 ms-ceintl.vscode-language-pack-ja
 ms-vscode-remote.remote-containers
@@ -30,6 +31,7 @@ qhoekman.language-plantuml
 rebornix.ruby
 redhat.vscode-yaml
 shardulm94.trailing-spaces
+shopify.ruby-lsp
 tyriar.sort-lines
 unional.vscode-sort-package-json
 well-ar.plantuml
