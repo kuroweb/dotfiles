@@ -100,10 +100,6 @@ brew "tfenv"
 # Testing
 brew "jmeter"
 
-# Mutagen
-tap "mutagen-io/mutagen"
-brew "mutagen-io/mutagen/mutagen-compose"
-
 # Command line tools
 brew "direnv"
 brew "jq"
