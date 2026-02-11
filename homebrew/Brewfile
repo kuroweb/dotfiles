@@ -1,9 +1,6 @@
 # --------------------
 # Base
 # --------------------
-# Homebrew
-tap "homebrew/services"
-
 # --------------------
 # Mac Tools
 # --------------------
@@ -72,11 +69,9 @@ brew "postgresql@14"
 brew "sqlite"
 
 # VPN
-cask "tunnelblick"
-brew "openvpn"
+brew "tailscale"
 
 # Font
-tap 'homebrew/cask-fonts'
 cask 'font-hackgen'
 cask 'font-hackgen-nerd'
 
@@ -84,7 +79,7 @@ cask 'font-hackgen-nerd'
 brew "awscli"
 
 # GCP
-cask "google-cloud-sdk"
+cask "gcloud-cli"
 
 # Scrcpy
 brew "scrcpy"
@@ -110,6 +105,10 @@ brew "yamllint"
 brew "tree"
 brew "wget"
 brew "just"
+
+# AI Agents
+brew "rulesync"
+cask "claude-code"
 
 # Inbox
 brew "gcc"
