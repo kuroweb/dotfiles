@@ -12,6 +12,10 @@ vscode/backup/*
 cursor/backup/*
 !cursor/backup/.keep
 
+# nvim
+nvim/backup/*
+!nvim/backup/.keep
+
 # homebrew
 homebrew/Brewfile.lock.json
 
