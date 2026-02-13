@@ -6,15 +6,18 @@ macOS の開発環境設定を管理するリポジトリ
 
 - [クイックスタート](#クイックスタート)
 - [Homebrew](#homebrew)
-- [zsh](#zsh)
-- [powerline-shell](#powerline-shell)
+- [シェル](#シェル)
+  - [zsh](#zsh)
+  - [powerline-shell](#powerline-shell)
 - [エディタ](#エディタ)
   - [Cursor](#cursor)
   - [VSCode](#vscode)
   - [Neovim](#neovim)
-- [Raycast](#raycast)
-- [Ruby](#ruby)
+- [rbenv](#rbenv)
+- [Ruby Tools](#ruby-tools)
 - [AIエージェント](#aiエージェント)
+- [Utility](#utility)
+  - [Raycast](#raycast)
 
 ## クイックスタート
 
@@ -79,7 +82,9 @@ macOS の開発環境設定を管理するリポジトリ
   brew bundle
   ```
 
-## zsh
+## シェル
+
+### zsh
 
 - シェル設定をセットアップする
 
@@ -88,7 +93,7 @@ macOS の開発環境設定を管理するリポジトリ
   source ~/.zshrc
   ```
 
-## powerline-shell
+### powerline-shell
 
 ターミナルのプロンプトをカスタマイズする
 
@@ -147,11 +152,22 @@ macOS の開発環境設定を管理するリポジトリ
   bash ~/dotfiles/nvim/install.sh
   ```
 
-## Raycast
+## rbenv
 
-- Raycast アプリの import 機能から設定ファイルを読み込む
+- Ruby 3.2.2 をインストール
 
-## Ruby
+  ```bash
+  rbenv install 3.2.2
+  rbenv global 3.2.2
+  ```
+
+- インストールされているバージョンを確認
+
+  ```bash
+  rbenv versions
+  ```
+
+## Ruby Tools
 
 - Ruby 関連のツール設定を目的ごとにディレクトリ分けして管理している
 
@@ -175,3 +191,9 @@ macOS の開発環境設定を管理するリポジトリ
   ```bash
   bash ~/dotfiles/agents/install.sh
   ```
+
+## Utility
+
+### Raycast
+
+- Raycast アプリの import 機能から設定ファイルを読み込む
