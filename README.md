@@ -4,8 +4,7 @@ macOS の開発環境設定を管理するリポジトリ
 
 ## 目次<!-- omit in toc -->
 
-- [セットアップ](#セットアップ)
-  - [クイックスタート](#クイックスタート)
+- [クイックスタート](#クイックスタート)
 - [Homebrew](#homebrew)
   - [インストール](#インストール)
   - [パッケージをまとめてインストール](#パッケージをまとめてインストール)
@@ -14,19 +13,16 @@ macOS の開発環境設定を管理するリポジトリ
 - [zsh](#zsh)
 - [powerline-shell](#powerline-shell)
   - [前提条件](#前提条件)
-  - [セットアップ](#セットアップ-1)
+  - [セットアップ](#セットアップ)
 - [エディタ](#エディタ)
   - [VSCode / Cursor](#vscode--cursor)
-  - [Raycast](#raycast)
+  - [Neovim](#neovim)
+- [Raycast](#raycast)
 - [Ruby](#ruby)
-- [AI エージェント共通設定](#ai-エージェント共通設定)
-  - [概要](#概要)
-  - [インストール](#インストール-1)
+- [AIエージェント](#aiエージェント)
 - [その他](#その他)
 
-## セットアップ
-
-### クイックスタート
+## クイックスタート
 
 ```bash
 # 1. リポジトリをクローン
@@ -40,15 +36,15 @@ cd ~/dotfiles/homebrew
 brew bundle
 
 # 4. zsh を設定
-ln -sf ~/dotfiles/zsh/zshrc ~/.zshrc
+bash ~/dotfiles/zsh/install.sh
 source ~/.zshrc
 ```
 
-詳細なセットアップは以下のセクションを参照すること。
+詳細なセットアップは以下のセクションを参照すること
 
 ## Homebrew
 
-パッケージマネージャーとしての Homebrew をセットアップする。
+パッケージマネージャーとしての Homebrew をセットアップする
 
 ### インストール
 
@@ -58,7 +54,7 @@ source ~/.zshrc
 
 ### パッケージをまとめてインストール
 
-Brewfile で指定したすべてのパッケージをインストールする。
+Brewfile で指定したすべてのパッケージをインストールする
 
 ```bash
 cd ~/dotfiles/homebrew
@@ -67,7 +63,7 @@ brew bundle
 
 ### パッケージの確認と削除
 
-Brewfile にあるパッケージと Mac にインストール済みのパッケージを比較する。
+Brewfile にあるパッケージと Mac にインストール済みのパッケージを比較する
 
 ```bash
 # 未インストールのパッケージをリスト表示
@@ -87,19 +83,16 @@ brew bundle
 
 ## zsh
 
-シェル設定をセットアップする。
+シェル設定をセットアップする
 
 ```bash
-# シンボリックリンクを作成
-ln -sf ~/dotfiles/zsh/zshrc ~/.zshrc
-
-# 設定を読み込む
+bash ~/dotfiles/zsh/install.sh
 source ~/.zshrc
 ```
 
 ## powerline-shell
 
-ターミナルのプロンプトをカスタマイズする。
+ターミナルのプロンプトをカスタマイズする
 
 ### 前提条件
 
@@ -134,7 +127,7 @@ source ~/.zshrc
 
 ### VSCode / Cursor
 
-設定ファイルをインストールスクリプト経由で反映する。
+設定ファイルをインストールスクリプト経由で反映する
 
 ```bash
 # VSCode
@@ -144,41 +137,45 @@ bash ~/dotfiles/vscode/install.sh
 bash ~/dotfiles/cursor/install.sh
 ```
 
-### Raycast
+### Neovim
 
-Raycast アプリの import 機能から設定ファイルを読み込む。
+設定ファイルをインストールスクリプト経由で反映する
+
+```bash
+bash ~/dotfiles/nvim/install.sh
+```
+
+## Raycast
+
+ランチャーアプリの設定を管理する
+
+Raycast アプリの import 機能から設定ファイルを読み込む
 
 ## Ruby
 
-Ruby 関連のツール設定を目的ごとにディレクトリ分けして管理している。
+Ruby 関連のツール設定を目的ごとにディレクトリ分けして管理している
 
-- [ruby-lsp](ruby/ruby-lsp/README.md) - Language Server Protocol
-- [rubocop](ruby/rubocop/README.md) - コード品質チェック
-- [solargraph](ruby/solargraph/README.md) - 静的解析とコード補完
+| ツール | 説明 |
+|--------|------|
+| [ruby-lsp](ruby/ruby-lsp/README.md) | Language Server Protocol |
+| [rubocop](ruby/rubocop/README.md) | コード品質チェック |
+| [solargraph](ruby/solargraph/README.md) | 静的解析とコード補完 |
 
-## AI エージェント共通設定
+## AIエージェント
 
-Cursor、Claude Code、Copilot、Codex CLI 向けのルール定義を統一管理する。
+Cursor、Claude Code、Copilot、Codex CLI 向けのルール定義を統一管理する
 
-### 概要
-
-- ソースコード：`agents/` 配下の `rulesync.jsonc` と `.rulesync/`
-- ビルドツール：[Rulesync](https://github.com/dyoshikawa/rulesync)
-
-### インストール
+以下のスクリプトで `~/.cursor` と `~/.claude` へシンボリックリンクを作成する
 
 ```bash
-# Rulesync をインストール
-npm install -g rulesync
-# または
-brew install rulesync
-
-# ルール定義を生成してリンク
 bash ~/dotfiles/agents/install.sh
 ```
 
-このスクリプトにより、`~/.cursor` と `~/.claude` へシンボリックリンクが作成される。
+| 項目 | 内容 |
+|------|------|
+| ソースコード | `agents/` 配下の `rulesync.jsonc` と `.rulesync/` |
+| ビルドツール | [Rulesync](https://github.com/dyoshikawa/rulesync) |
 
 ## その他
 
-プロジェクト固有のセットアップが必要な場合は、各ディレクトリの README を参照すること。
+プロジェクト固有のセットアップが必要な場合は、各ディレクトリの README を参照すること

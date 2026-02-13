@@ -3,18 +3,16 @@
 
 # zsh
 zsh/env.zsh
+zsh/backup
 
 # vscode
-vscode/backup/*
-!vscode/backup/.keep
+vscode/backup
 
 # cursor
-cursor/backup/*
-!cursor/backup/.keep
+cursor/backup
 
 # nvim
-nvim/backup/*
-!nvim/backup/.keep
+nvim/backup
 
 # homebrew
 homebrew/Brewfile.lock.json
