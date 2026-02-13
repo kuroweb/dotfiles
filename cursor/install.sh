@@ -1,4 +1,5 @@
 #!/bin/sh
+set -e
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 CURSOR_SETTING_DIR=~/Library/Application\ Support/Cursor/User
 
