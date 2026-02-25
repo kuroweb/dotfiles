@@ -10,6 +10,12 @@ link_file() {
   local dest="$HOME/$target_dir/$name"
   local backup_dir="$SCRIPT_DIR/backup/$target_dir"
 
+  # ソースファイルの存在チェック
+  if [ ! -e "$src" ]; then
+    echo "Warning: Source file does not exist: $src (skipping)"
+    return 0
+  fi
+
   if [ -e "$dest" ]; then
     if [ -L "$dest" ] && [ "$(readlink "$dest")" = "$src" ]; then
       echo "Already linked: $dest -> $(readlink "$dest")"
@@ -34,6 +40,12 @@ link_directory() {
   local dest="$HOME/$target_dir/$name"
   local backup_dir="$SCRIPT_DIR/backup/$target_dir"
 
+  # ソースディレクトリの存在チェック
+  if [ ! -d "$src" ]; then
+    echo "Warning: Source directory does not exist: $src (skipping)"
+    return 0
+  fi
+
   if [ -e "$dest" ]; then
     if [ -L "$dest" ] && [ "$(readlink "$dest")" = "$src" ]; then
       echo "Already linked: $dest -> $(readlink "$dest")"
@@ -57,15 +69,17 @@ mkdir -p "$HOME/.claude"
 link_file ".claude" "settings.json"
 link_file ".claude" "settings.local.json"
 link_directory ".claude" "rules"
-link_directory ".claude" "scripts"
 link_directory ".claude" "skills"
 link_directory ".claude" "agents"
+link_directory ".claude" "scripts"
 echo ""
 
 # ~/.cursor にシンボリックリンクを作成
 echo "Setting up .cursor..."
 mkdir -p "$HOME/.cursor"
+link_file ".cursor" ".env"
+link_file ".cursor" "mcp.json"
 link_directory ".cursor" "rules"
-link_directory ".cursor" "scripts"
 link_directory ".cursor" "skills"
 link_directory ".cursor" "agents"
+link_directory ".cursor" "scripts"
