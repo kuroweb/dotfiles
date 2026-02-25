@@ -18,6 +18,7 @@ macOS の開発環境設定を管理するリポジトリ
 - [Utility](#utility)
   - [Raycast](#raycast)
 - [AIエージェント](#aiエージェント)
+  - [install.shが作成するシンボリックリンク](#installshが作成するシンボリックリンク)
   - [rulesyncで管理するもの](#rulesyncで管理するもの)
 
 ## クイックスタート
@@ -186,21 +187,39 @@ macOS の開発環境設定を管理するリポジトリ
 
 ## AIエージェント
 
-- Cursor、Claude Code、Copilot、Codex CLI 向けのルール定義を統一管理する
+- Cursor、Claude Code 向けのルール定義を統一管理する
 
   | 項目 | 内容 |
   | --- | --- |
   | ソースコード | `agents/` 配下の `rulesync.jsonc` と `.rulesync/` |
   | ビルドツール | [Rulesync](https://github.com/dyoshikawa/rulesync) |
 
-- 以下のスクリプトで `~/.cursor` と `~/.claude` へシンボリックリンクを作成する
+- セットアップスクリプトを実行する
 
   ```bash
   bash ~/dotfiles/agents/install.sh
   ```
 
+### install.shが作成するシンボリックリンク
+
+**~/.claude**
+
+- `settings.json` - Claude Code の設定ファイル (statusline、モデル設定など)
+- `settings.local.json` - ローカル環境固有の設定
+- `rules/` - プロジェクト固有のルール定義
+- `scripts/` - statusline.sh などのカスタムスクリプト
+- `skills/` - カスタムスキル定義
+- `agents/` - サブエージェント定義
+
+**~/.cursor**
+
+- `rules/` - プロジェクト固有のルール定義
+- `scripts/` - カスタムスクリプト
+- `skills/` - カスタムスキル定義
+- `agents/` - サブエージェント定義
+
 ### rulesyncで管理するもの
 
-- rules
-- skills
-- subagents
+- `rules/`
+- `skills/`
+- `agents/`
