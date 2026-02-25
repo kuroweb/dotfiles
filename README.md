@@ -18,8 +18,12 @@ macOS の開発環境設定を管理するリポジトリ
 - [Utility](#utility)
   - [Raycast](#raycast)
 - [AIエージェント](#aiエージェント)
-  - [install.shが作成するシンボリックリンク](#installshが作成するシンボリックリンク)
-  - [rulesyncで管理するもの](#rulesyncで管理するもの)
+  - [セットアップ](#セットアップ)
+  - [管理方針](#管理方針)
+    - [rulesync で共通化](#rulesync-で共通化)
+    - [個別管理](#個別管理)
+  - [管理構成](#管理構成)
+  - [ディレクトリ構造](#ディレクトリ構造)
 
 ## クイックスタート
 
@@ -187,39 +191,56 @@ macOS の開発環境設定を管理するリポジトリ
 
 ## AIエージェント
 
-- Cursor、Claude Code 向けのルール定義を統一管理する
+Cursor と Claude Code 向けのルール定義・スキル・スクリプトを統一管理する。
 
-  | 項目 | 内容 |
-  | --- | --- |
-  | ソースコード | `agents/` 配下の `rulesync.jsonc` と `.rulesync/` |
-  | ビルドツール | [Rulesync](https://github.com/dyoshikawa/rulesync) |
+### セットアップ
 
-- セットアップスクリプトを実行する
+```bash
+bash ~/dotfiles/agents/install.sh
+```
 
-  ```bash
-  bash ~/dotfiles/agents/install.sh
-  ```
+### 管理方針
 
-### install.shが作成するシンボリックリンク
+#### rulesync で共通化
 
-**~/.claude**
+以下は Cursor と Claude Code で共通の内容として管理：
 
-- `settings.json` - Claude Code の設定ファイル (statusline、モデル設定など)
-- `settings.local.json` - ローカル環境固有の設定
-- `rules/` - プロジェクト固有のルール定義
-- `scripts/` - statusline.sh などのカスタムスクリプト
-- `skills/` - カスタムスキル定義
-- `agents/` - サブエージェント定義
+| 対象 | 理由 |
+| --- | --- |
+| `rules/` | コーディング規約・設計原則は両ツール共通 |
+| `skills/` | 再利用可能なワークフローやパターンは両ツール共通 |
+| `agents/` | サブエージェント定義は両ツール共通 |
 
-**~/.cursor**
+#### 個別管理
 
-- `rules/` - プロジェクト固有のルール定義
-- `scripts/` - カスタムスクリプト
-- `skills/` - カスタムスキル定義
-- `agents/` - サブエージェント定義
+上記以外（`settings.json`, `scripts/` など）はツール固有の設定・実行環境として個別管理する。
 
-### rulesyncで管理するもの
+### 管理構成
 
-- `rules/`
-- `skills/`
-- `agents/`
+| 項目 | 説明 |
+| --- | --- |
+| **ソースコード** | `agents/.claude/` と `agents/.cursor/` |
+| **ビルドツール** | [Rulesync](https://github.com/dyoshikawa/rulesync) |
+| **設定ファイル** | `agents/rulesync.jsonc` |
+
+### ディレクトリ構造
+
+**Claude Code (`~/.claude/`)**
+
+| パス | 説明 |
+| --- | --- |
+| `rules/` | プロジェクト固有のルール定義 (rulesync管理) |
+| `skills/` | カスタムスキル定義 (rulesync管理) |
+| `agents/` | サブエージェント定義 (rulesync管理) |
+| `settings.json` | statusline、モデル設定など |
+| `settings.local.json` | ローカル環境固有の設定 |
+| `scripts/` | statusline.sh などのカスタムスクリプト |
+
+**Cursor (`~/.cursor/`)**
+
+| パス | 説明 |
+| --- | --- |
+| `rules/` | プロジェクト固有のルール定義 (rulesync管理) |
+| `skills/` | カスタムスキル定義 (rulesync管理) |
+| `agents/` | サブエージェント定義 (rulesync管理) |
+| `scripts/` | カスタムスクリプト |
