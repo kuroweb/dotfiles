@@ -15,9 +15,10 @@ macOS の開発環境設定を管理するリポジトリ
   - [Neovim](#neovim)
 - [rbenv](#rbenv)
 - [Ruby Tools](#ruby-tools)
-- [AIエージェント](#aiエージェント)
 - [Utility](#utility)
   - [Raycast](#raycast)
+- [AIエージェント](#aiエージェント)
+  - [rulesyncで管理するもの](#rulesyncで管理するもの)
 
 ## クイックスタート
 
@@ -177,6 +178,12 @@ macOS の開発環境設定を管理するリポジトリ
   | [rubocop](ruby/rubocop/README.md) | コード品質チェック |
   | [solargraph](ruby/solargraph/README.md) | 静的解析とコード補完 |
 
+## Utility
+
+### Raycast
+
+- Raycast アプリの import 機能から設定ファイルを読み込む
+
 ## AIエージェント
 
 - Cursor、Claude Code、Copilot、Codex CLI 向けのルール定義を統一管理する
@@ -192,8 +199,9 @@ macOS の開発環境設定を管理するリポジトリ
   bash ~/dotfiles/agents/install.sh
   ```
 
-## Utility
+### rulesyncで管理するもの
 
-### Raycast
-
-- Raycast アプリの import 機能から設定ファイルを読み込む
+- overview
+- rules
+- skills
+- subagents
