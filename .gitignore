@@ -19,3 +19,4 @@ homebrew/Brewfile.lock.json
 
 # agents
 agents/backup
+agents/.cursor/mcp.json
