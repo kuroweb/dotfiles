@@ -60,5 +60,8 @@
       "codeLens": false
     },
     "claudeCode.selectedModel": "haiku",
-    "claudeCode.useTerminal": true
+    "claudeCode.useTerminal": true,
+    "[jsonc]": {
+      "editor.defaultFormatter": "vscode.json-language-features"
+    }
 }
