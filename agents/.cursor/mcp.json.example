@@ -1,7 +1,7 @@
 {
   "mcpServers": {
     "esa": {
-      "command": "./scripts/start-esa-mcp.sh",
+      "command": "~/.cursor/scripts/start-esa-mcp.sh",
       "args": [],
       "alwaysAllow": [
         "esa_get_post"
