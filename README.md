@@ -201,7 +201,6 @@ macOS の開発環境設定を管理するリポジトリ
 
 ### rulesyncで管理するもの
 
-- overview
 - rules
 - skills
 - subagents
