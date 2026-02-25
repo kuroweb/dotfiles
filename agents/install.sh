@@ -1,45 +1,71 @@
-#!/bin/bash
-# 使い方: bash agents/install.sh [cursor|claude]
-# rulesync generate のあと、agents/.cursor と .claude を ~/.cursor / ~/.claude にシンボリックリンクする。
-# 引数で cursor または claude を指定するとその一方だけ行う。
-
+#!/bin/sh
 set -e
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
-AGENTS_DIR="$(cd "$(dirname "$0")" && pwd)"
+# ファイルのシンボリックリンクを作成する関数
+link_file() {
+  local target_dir="$1"
+  local name="$2"
+  local src="$SCRIPT_DIR/.claude/$name"
+  local dest="$HOME/$target_dir/$name"
+  local backup_dir="$SCRIPT_DIR/backup/$target_dir"
 
-link_agent_dir() {
-  local name="$1"
-  local src="$AGENTS_DIR/.$name"
-  local target="$HOME/.$name"
-  echo "Creating global $name symlinks..."
-  mkdir -p "$target"
-  for item in "$src"/*; do
-    [ -e "$item" ] || continue
-    local name_ent="$(basename "$item")"
-    if [ -e "$target/$name_ent" ] && [ ! -L "$target/$name_ent" ]; then
-      echo "Warning: $target/$name_ent exists and is not a symlink. Skipping."
+  if [ -e "$dest" ]; then
+    if [ -L "$dest" ] && [ "$(readlink "$dest")" = "$src" ]; then
+      echo "Already linked: $dest -> $(readlink "$dest")"
     else
-      ln -sfn "$item" "$target/$name_ent"
-      echo "Linked: $target/$name_ent -> $item"
+      mkdir -p "$backup_dir"
+      echo "Backing up existing $name to $backup_dir"
+      cp "$dest" "$backup_dir/$name.$(date +%Y%m%d%H%M%S)"
+      ln -sf "$src" "$dest"
+      echo "Linked $dest -> $src"
     fi
-  done
-  echo "$name install done."
+  else
+    ln -sf "$src" "$dest"
+    echo "Linked $dest -> $src"
+  fi
 }
 
-echo "Running rulesync generate in $AGENTS_DIR..."
-(cd "$AGENTS_DIR" && rulesync generate) || {
-  echo "Error: rulesync generate failed. Install rulesync: npm install -g rulesync or brew install rulesync"
-  exit 1
+# ディレクトリのシンボリックリンクを作成する関数
+link_directory() {
+  local target_dir="$1"
+  local name="$2"
+  local src="$SCRIPT_DIR/.claude/$name"
+  local dest="$HOME/$target_dir/$name"
+  local backup_dir="$SCRIPT_DIR/backup/$target_dir"
+
+  if [ -e "$dest" ]; then
+    if [ -L "$dest" ] && [ "$(readlink "$dest")" = "$src" ]; then
+      echo "Already linked: $dest -> $(readlink "$dest")"
+    else
+      mkdir -p "$backup_dir"
+      echo "Backing up existing $name directory to $backup_dir"
+      cp -R "$dest" "$backup_dir/$name.$(date +%Y%m%d%H%M%S)"
+      rm -rf "$dest"
+      ln -sf "$src" "$dest"
+      echo "Linked $dest -> $src"
+    fi
+  else
+    ln -sf "$src" "$dest"
+    echo "Linked $dest -> $src"
+  fi
 }
 
-if [ -n "${1:-}" ]; then
-  case "$1" in
-    cursor|claude) link_agent_dir "$1" ;;
-    *) echo "Usage: $0 [cursor|claude]" >&2; exit 1 ;;
-  esac
-else
-  link_agent_dir cursor
-  link_agent_dir claude
-fi
+# ~/.claude にシンボリックリンクを作成
+echo "Setting up .claude..."
+mkdir -p "$HOME/.claude"
+link_file ".claude" "settings.json"
+link_file ".claude" "settings.local.json"
+link_directory ".claude" "rules"
+link_directory ".claude" "scripts"
+link_directory ".claude" "skills"
+link_directory ".claude" "agents"
+echo ""
 
-echo "Done!"
+# ~/.cursor にシンボリックリンクを作成
+echo "Setting up .cursor..."
+mkdir -p "$HOME/.cursor"
+link_directory ".cursor" "rules"
+link_directory ".cursor" "scripts"
+link_directory ".cursor" "skills"
+link_directory ".cursor" "agents"

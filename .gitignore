@@ -16,3 +16,6 @@ nvim/backup
 
 # homebrew
 homebrew/Brewfile.lock.json
+
+# agents
+agents/backup
