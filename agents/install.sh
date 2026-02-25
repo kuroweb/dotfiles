@@ -6,7 +6,7 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 link_file() {
   local target_dir="$1"
   local name="$2"
-  local src="$SCRIPT_DIR/.claude/$name"
+  local src="$SCRIPT_DIR/$target_dir/$name"
   local dest="$HOME/$target_dir/$name"
   local backup_dir="$SCRIPT_DIR/backup/$target_dir"
 
@@ -30,7 +30,7 @@ link_file() {
 link_directory() {
   local target_dir="$1"
   local name="$2"
-  local src="$SCRIPT_DIR/.claude/$name"
+  local src="$SCRIPT_DIR/$target_dir/$name"
   local dest="$HOME/$target_dir/$name"
   local backup_dir="$SCRIPT_DIR/backup/$target_dir"
 
