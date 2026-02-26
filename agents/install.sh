@@ -83,3 +83,13 @@ link_directory ".cursor" "rules"
 link_directory ".cursor" "skills"
 link_directory ".cursor" "agents"
 link_directory ".cursor" "scripts"
+echo ""
+
+# ~/.codex にシンボリックリンクを作成
+echo "Setting up .codex..."
+mkdir -p "$HOME/.codex"
+link_directory ".codex" "memories"
+link_directory ".codex" "rules"
+link_directory ".codex" "skills"
+link_directory ".codex" "agents"
+link_directory ".codex" "scripts"
