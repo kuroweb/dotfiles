@@ -1,13 +1,9 @@
-# env
-.env
-
 # .claude
 settings.local.json
 
 # .codex
 
 # .cursor
-.cursor/mcp.json
 
 # .rulesync
 

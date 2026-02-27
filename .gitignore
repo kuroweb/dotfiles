@@ -1,6 +1,3 @@
-# env
-.env
-
 # others
 .DS_Store
 
@@ -31,4 +28,3 @@ homebrew/Brewfile.lock.json
 !agents/.codex/
 agents/scripts/backup/
 agents/.claude/settings.local.json
-agents/.cursor/mcp.json
