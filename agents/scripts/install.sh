@@ -80,7 +80,6 @@ mkdir -p "$HOME/.cursor"
 link_directory ".cursor" "rules"
 link_directory ".cursor" "skills"
 link_directory ".cursor" "agents"
-link_directory ".cursor" "scripts"
 echo ""
 
 # ~/.codex にシンボリックリンクを作成
