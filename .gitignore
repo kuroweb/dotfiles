@@ -1,31 +1,34 @@
+# env
 .env
+
+# others
 .DS_Store
 
 # zsh
 zsh/env.zsh
-zsh/backup
+zsh/backup/
 
 # vscode
-vscode/backup
+vscode/backup/
 
 # cursor
-cursor/backup
+cursor/backup/
 
 # nvim
-nvim/backup
+nvim/backup/
 
 # homebrew
 homebrew/Brewfile.lock.json
 
+# root agents
+.claude/
+.cursor/
+.codex/
+
 # agents
-agents/backup
-
-# sync
-backup
-
-.claude
-!agents/.claude
-
-.cursor
-!agents/.cursor
+!agents/.claude/
+!agents/.cursor/
+!agents/.codex/
+agents/scripts/backup/
+agents/.claude/settings.local.json
 agents/.cursor/mcp.json

@@ -1,14 +1,14 @@
 #!/bin/sh
 set -e
-SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+AGENTS_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 
 # ファイルのシンボリックリンクを作成する関数
 link_file() {
   local target_dir="$1"
   local name="$2"
-  local src="$SCRIPT_DIR/$target_dir/$name"
+  local src="$AGENTS_DIR/$target_dir/$name"
   local dest="$HOME/$target_dir/$name"
-  local backup_dir="$SCRIPT_DIR/backup/$target_dir"
+  local backup_dir="$AGENTS_DIR/backup/$target_dir"
 
   # ソースファイルの存在チェック
   if [ ! -e "$src" ]; then
@@ -36,9 +36,9 @@ link_file() {
 link_directory() {
   local target_dir="$1"
   local name="$2"
-  local src="$SCRIPT_DIR/$target_dir/$name"
+  local src="$AGENTS_DIR/$target_dir/$name"
   local dest="$HOME/$target_dir/$name"
-  local backup_dir="$SCRIPT_DIR/backup/$target_dir"
+  local backup_dir="$AGENTS_DIR/backup/$target_dir"
 
   # ソースディレクトリの存在チェック
   if [ ! -d "$src" ]; then
