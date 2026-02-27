@@ -20,6 +20,9 @@ homebrew/Brewfile.lock.json
 # agents
 agents/backup
 
+# sync
+backup
+
 .claude
 !agents/.claude
 
