@@ -118,6 +118,7 @@ brew "graphviz"
 brew "coreutils"
 brew "redis"
 brew "ansible"
+brew "gh"
 
 # --------------------
 # Work Tools
