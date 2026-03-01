@@ -108,6 +108,10 @@ brew "rulesync"
 cask "codex"
 cask "claude-code"
 
+# Message
+cask "slack"
+cask "discord"
+
 # Inbox
 brew "gcc"
 brew "guile"
@@ -119,9 +123,3 @@ brew "coreutils"
 brew "redis"
 brew "ansible"
 brew "gh"
-
-# --------------------
-# Work Tools
-# --------------------
-# Message
-cask "slack"
