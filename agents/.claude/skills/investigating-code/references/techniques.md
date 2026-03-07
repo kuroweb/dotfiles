@@ -63,7 +63,7 @@ ORDER BY date ASC, cnt DESC
 ```sql
 -- 期限切れクーポンの確認
 SELECT promo_kbn, end_date, status
-FROM M_PROMO
+FROM promos
 WHERE promo_kbn IN (1001, 1002, 1003, ...)
 ```
 

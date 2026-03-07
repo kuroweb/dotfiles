@@ -278,7 +278,7 @@
   - [src/batch/generate_summary.rb#L80](リポジトリへのリンク)
 - SELECT内容
   - `user_promo`: ユーザープロモコードの金額
-  - `system_promo`: システムプロモコードの金額
+  - `systepromos`: システムプロモコードの金額
   - `payment_amount`: 注文金額から利用プロモコードの金額を差し引いた金額
 
 **対応方針:**

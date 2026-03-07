@@ -124,11 +124,11 @@ description: |
 ```markdown
 ## 悪い例（全項目に絵文字）
 - 👉Native SQLに変更する
-- 👉D_COUPONテーブルへのJOINを追加する
+- 👉couponsテーブルへのJOINを追加する
 - 👉MySQLとSQL Serverの両方に対応する
 
 ## 良い例（結論のみに絵文字）
-- Native SQLに変更し、D_COUPONテーブルへのJOINを追加する
+- Native SQLに変更し、couponsテーブルへのJOINを追加する
 - MySQLとSQL Serverの両方に対応する
 - 👉ただし、呼び出し元で使用されていないため、撤去の方が適切
 ```
