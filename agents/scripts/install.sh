@@ -77,6 +77,7 @@ echo ""
 # ~/.cursor にシンボリックリンクを作成
 echo "Setting up .cursor..."
 mkdir -p "$HOME/.cursor"
+link_file ".cursor" "mcp.json"
 link_directory ".cursor" "rules"
 link_directory ".cursor" "skills"
 link_directory ".cursor" "agents"

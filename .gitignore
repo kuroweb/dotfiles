@@ -22,9 +22,18 @@ homebrew/Brewfile.lock.json
 .cursor/
 .codex/
 
+#
 # agents
-!agents/.claude/
-!agents/.cursor/
-!agents/.codex/
+#
+
 agents/scripts/backup/
+
+# .claude
+!agents/.claude/
 agents/.claude/settings.local.json
+
+# .cursor
+!agents/.cursor/
+
+# .codex
+!agents/.codex/
