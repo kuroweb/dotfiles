@@ -89,3 +89,11 @@ mkdir -p "$HOME/.codex"
 link_directory ".codex" "agents"
 link_directory ".codex" "memories"
 link_directory ".codex" "skills"
+echo ""
+
+# ~/.gemini にシンボリックリンクを作成
+echo "Setting up .gemini..."
+mkdir -p "$HOME/.gemini"
+link_directory ".gemini" "memories"
+link_directory ".gemini" "skills"
+echo ""
