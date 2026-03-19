@@ -17,23 +17,5 @@ nvim/backup/
 # homebrew
 homebrew/Brewfile.lock.json
 
-# root agents
-.claude/
-.cursor/
-.codex/
-
-#
-# agents
-#
-
-agents/scripts/backup/
-
 # .claude
-!agents/.claude/
-agents/.claude/settings.local.json
-
-# .cursor
-!agents/.cursor/
-
-# .codex
-!agents/.codex/
+.claude/settings.local.json
