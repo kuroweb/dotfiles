@@ -105,3 +105,9 @@ function git_private2() {
 fpath=("~/.zsh/completions" $fpath)
 autoload -Uz compinit
 compinit
+
+#
+# Cursor CLI
+#
+
+export PATH="$HOME/.local/bin:$PATH"
