@@ -107,6 +107,7 @@ brew "just"
 brew "rulesync"
 cask "codex"
 cask "claude-code"
+cask "cursor-cli"
 
 # Message
 cask "slack"
