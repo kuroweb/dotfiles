@@ -102,6 +102,7 @@ brew "yamllint"
 brew "tree"
 brew "wget"
 brew "just"
+brew "worktrunk"
 
 # AI Agents
 brew "rulesync"
