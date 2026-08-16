@@ -37,3 +37,6 @@ link_file() {
 
 echo "Setting up worktrunk..."
 link_file "worktrunk" "config.toml"
+
+echo "Setting up herdr..."
+link_file "herdr" "config.toml"
