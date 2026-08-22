@@ -240,7 +240,7 @@
 # <!-- DEFAULT_SQUASH_TEMPLATE_END -->
 
 # worktreeを~/worktrees/<repo>/<branch>配下に作成する。
-worktree-path = "~/worktrees/{{ repo }}/{{ branch | sanitize }}"
+worktree-path = "{{ repo_path }}/../{{ repo }}.{{ branch | sanitize }}"
 
 # worktree開始時に、前のworktreeからgitignore対象ファイルをコピーする。
 [post-start]
