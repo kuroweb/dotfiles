@@ -1,3 +1,4 @@
+onboarding = false
 # herdr configuration
 # Place this file at ~/.config/herdr/config.toml
 
@@ -258,6 +259,20 @@ agent_panel_sort = "spaces"
 # kitty_graphics = false
 # Save recent pane screen history across full server restarts.
 pane_history = false
+
+# TUI がカーソルを隠していても、IME が候補ウィンドウの位置を
+# 追えるように外側のターミナルへカーソル位置を公開する
+reveal_hidden_cursor_for_cjk_ime = true
+
+# 上の設定を適用するエージェント（フォーカス中のペインで判定）
+cjk_ime_agents = ["claude", "codex", "kiro", "amp"]
+
+# IME 用に表示するカーソルの形状
+cjk_ime_cursor_shape = "steady_block"
+
+# prefix モードの間だけ macOS の入力ソースを ASCII 系に切り替え、抜けたら元の入力ソースに戻す
+switch_ascii_input_source_in_prefix = true
+
 # While prefix mode is active, temporarily switch the macOS host input
 # source to an ASCII-capable keyboard layout so prefix commands register
 # even when a CJK IME is active, then restore the previous input source
@@ -282,18 +297,6 @@ pane_history = false
 # Maximum scrollback buffer size in bytes retained per pane terminal.
 # Matches Ghostty's default scrollback-limit behavior.
 # scrollback_limit_bytes = 10000000
-
-# TUI がカーソルを隠していても、IME が候補ウィンドウの位置を
-# 追えるように外側のターミナルへカーソル位置を公開する
-reveal_hidden_cursor_for_cjk_ime = true
-
-# 上の設定を適用するエージェント（フォーカス中のペインで判定）
-cjk_ime_agents = ["claude", "codex", "kiro", "omp"]
-# IME 用に表示するカーソルの形状
-cjk_ime_cursor_shape = "steady_block"
-
-# prefix モードの間だけ macOS の入力ソースを ASCII 系に切り替え、抜けたら元の入力ソースに戻す
-switch_ascii_input_source_in_prefix = true
 
 # herdr-file-viewer: prefix+f で split 起動
 [[keys.command]]
