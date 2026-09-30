@@ -193,6 +193,16 @@ focus_pane_right = "prefix+right"
 # Show detected/reported agent labels in split pane borders when no manual pane name is set.
 # show_agent_labels_on_pane_borders = false
 
+# Agent panel ordering: "spaces" (grouped by space) or "priority" (attention queue).
+agent_panel_sort = "spaces"
+
+# 1行目は既定どおり workspace/tab、2行目だけ claude · タイトル
+[ui.sidebar.agents]
+rows = [
+  ["state_icon", "machine", "workspace", "tab"],
+  ["agent", "terminal_title_stripped"],
+]
+
 # Hide the tab row when a workspace has exactly one tab.
 # New tabs can still be created with the configured keybinding.
 # hide_tab_bar_when_single_tab = false
@@ -206,7 +216,6 @@ focus_pane_right = "prefix+right"
 # accent = "cyan"
 
 # Background notification popup delivery
-agent_panel_sort = "spaces"
 [ui.toast]
 # off = disable pop-up notifications
 # herdr = show in-app toasts
