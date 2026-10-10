@@ -1,7 +1,13 @@
 [
+  // Cursor 既定: Cmd+E で Agent レイアウト切替 → 無効化
   {
-    "key": "ctrl+r",
-    "command": "-workbench.action.quickOpenNavigateNextInRecentFilesPicker",
-    "when": "inQuickOpen && inRecentFilesPicker"
+    "key": "cmd+e",
+    "command": "-cursor.toggleAgentWindowIDEUnification"
+  },
+  // Markdown: 選択範囲を `xxx`（インラインコード）で囲む / 外す
+  {
+    "key": "cmd+e",
+    "command": "markdown.extension.editing.toggleCodeSpan",
+    "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
   }
 ]
