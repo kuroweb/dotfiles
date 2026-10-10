@@ -16,6 +16,8 @@ cask "appcleaner"
 cask "iina"
 cask "notunes"
 cask "linearmouse"
+cask "google-drive"
+cask "openmtp"
 
 # --------------------
 # Dev Tools
@@ -24,7 +26,6 @@ cask "linearmouse"
 brew "icu4c"
 brew "libyaml"
 brew "openssl@3"
-brew "openssl@1.1"
 brew "rbenv"
 brew "readline"
 brew "ruby-build"
@@ -34,10 +35,10 @@ brew "nodenv"
 brew "node-build"
 brew "node"
 brew "yarn"
-brew "npm"
 
 # Python
 brew "pyenv"
+brew "pipx"
 
 # Java
 brew "openjdk"
@@ -48,11 +49,10 @@ brew "goenv"
 # Editor
 cask "visual-studio-code"
 cask "cursor"
-brew "nvim"
+brew "neovim"
 
 # Terminal
 cask "iterm2"
-cask "warp"
 
 # API Client
 cask "postman"
@@ -62,11 +62,11 @@ cask "dbeaver-community"
 
 # DB
 brew "mysql"
-brew "postgresql@14"
 brew "sqlite"
 
 # VPN
 brew "tailscale"
+brew "openvpn"
 
 # Font
 cask 'font-hackgen'
@@ -89,8 +89,12 @@ brew "fastly/tap/fastly"
 # terraform
 brew "tfenv"
 
+# Container
+cask "docker-desktop"
+
 # Testing
 brew "jmeter"
+brew "playwright-cli"
 
 # Command line tools
 brew "direnv"
@@ -103,17 +107,30 @@ brew "tree"
 brew "wget"
 brew "just"
 brew "worktrunk"
+brew "git-filter-repo"
+brew "certbot"
+brew "mkcert"
+brew "unar"
+brew "wimlib"
+brew "imagemagick"
+brew "tesseract"
+cask "notion-cli"
 
 # AI Agents
 brew "rulesync"
 cask "codex"
 cask "claude-code"
 cask "cursor-cli"
-brew "gemini-cli"
+brew "herdr"
+cask "claude"
+cask "chatgpt"
 
 # Message
 cask "slack"
 cask "discord"
+
+# Electronics
+cask "kicad"
 
 # Inbox
 brew "gcc"
