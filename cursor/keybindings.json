@@ -19,5 +19,10 @@
   {
     "key": "ctrl+t",
     "command": "workbench.action.newWindowTab"
+  },
+  // Ctrl+R: 最近開いたフォルダ・ワークスペース・ファイルを開く
+  {
+    "key": "ctrl+r",
+    "command": "workbench.action.openRecent"
   }
 ]
