@@ -1,13 +1,23 @@
 [
-  // Cursor 既定: Cmd+E で Agent レイアウト切替 → 無効化
+  // Cmd+E: Agent レイアウト切替を無効化
   {
     "key": "cmd+e",
     "command": "-cursor.toggleAgentWindowIDEUnification"
   },
-  // Markdown: 選択範囲を `xxx`（インラインコード）で囲む / 外す
+  // Cmd+E: Markdown の選択範囲をインラインコードで囲む / 外す
   {
     "key": "cmd+e",
     "command": "markdown.extension.editing.toggleCodeSpan",
     "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
+  },
+  // Ctrl+T: 文字入れ替えを無効化
+  {
+    "key": "ctrl+t",
+    "command": "-editor.action.transposeLetters"
+  },
+  // Ctrl+T: ネイティブタブで空のワークベンチを開く
+  {
+    "key": "ctrl+t",
+    "command": "workbench.action.newWindowTab"
   }
 ]
