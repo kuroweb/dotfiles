@@ -64,5 +64,7 @@
     "claudeCode.selectedModel": "haiku",
     "[jsonc]": {
       "editor.defaultFormatter": "vscode.json-language-features"
-    }
+    },
+    "cursor.composer.shouldChimeAfterChatFinishes": true,
+    "editor.accessibilitySupport": "off"
 }
