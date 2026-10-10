@@ -1,6 +1,7 @@
 [
   {
-    "key": "cmd+i",
-    "command": "composerMode.agent"
+    "key": "ctrl+r",
+    "command": "-workbench.action.quickOpenNavigateNextInRecentFilesPicker",
+    "when": "inQuickOpen && inRecentFilesPicker"
   }
 ]
