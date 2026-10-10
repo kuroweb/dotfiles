@@ -113,9 +113,7 @@ macOS の開発環境設定を管理するリポジトリ
 - powerline-shell をインストール
 
   ```bash
-  git clone https://github.com/b-ryan/powerline-shell
-  cd powerline-shell
-  python3 setup.py install
+  pipx install powerline-shell
   ```
 
 - 設定ファイルをリンク
