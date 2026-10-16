@@ -14,7 +14,6 @@
     },
     "git",
     "git_stash",
-    "hg",
-    "jobs"
+    "hg"
   ]
 }
