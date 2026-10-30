@@ -9,7 +9,7 @@
 
 ## Required
 
-- rbenv
+- mise
 - VSCode Extension:
   - [castwide.solargraph](https://marketplace.visualstudio.com/items?itemName=castwide.solargraph)
 

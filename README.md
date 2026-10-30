@@ -13,7 +13,7 @@ macOS の開発環境設定を管理するリポジトリ
   - [Cursor](#cursor)
   - [VSCode](#vscode)
   - [Neovim](#neovim)
-- [rbenv](#rbenv)
+- [mise](#mise)
 - [Ruby Tools](#ruby-tools)
 - [Utility](#utility)
   - [Raycast](#raycast)
@@ -149,19 +149,18 @@ macOS の開発環境設定を管理するリポジトリ
   bash ~/dotfiles/nvim/install.sh
   ```
 
-## rbenv
+## mise
 
 - Ruby 3.2.2 をインストール
 
   ```bash
-  rbenv install 3.2.2
-  rbenv global 3.2.2
+  mise use -g ruby@3.2.2
   ```
 
 - インストールされているバージョンを確認
 
   ```bash
-  rbenv versions
+  mise ls
   ```
 
 ## Ruby Tools

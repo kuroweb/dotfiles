@@ -87,7 +87,7 @@
         "typeHierarchy": true
     },
     "rubyLsp.rubyVersionManager": {
-        "identifier": "rbenv"
+        "identifier": "mise"
     },
     "ruby.rubocop.useBundler": true,
     "rubyLsp.formatter": "none"

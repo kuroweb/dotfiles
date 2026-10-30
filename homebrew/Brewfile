@@ -22,16 +22,16 @@ cask "openmtp"
 # --------------------
 # Dev Tools
 # --------------------
+# Version manager
+brew "mise"
+
 # Ruby
 brew "icu4c"
 brew "libyaml"
 brew "openssl@3"
-brew "rbenv"
 brew "readline"
-brew "ruby-build"
 
 # Node.js
-brew "mise"
 brew "node"
 brew "yarn"
 
