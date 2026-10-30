@@ -34,9 +34,6 @@ brew "readline"
 # Java
 brew "openjdk"
 
-# Go
-brew "goenv"
-
 # Editor
 cask "visual-studio-code"
 cask "cursor"
