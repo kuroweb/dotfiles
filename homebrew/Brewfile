@@ -31,10 +31,6 @@ brew "libyaml"
 brew "openssl@3"
 brew "readline"
 
-# Node.js
-brew "node"
-brew "yarn"
-
 # Python
 brew "pyenv"
 brew "pipx"
@@ -93,7 +89,6 @@ cask "docker-desktop"
 
 # Testing
 brew "jmeter"
-brew "playwright-cli"
 
 # Command line tools
 brew "direnv"
@@ -116,7 +111,6 @@ brew "tesseract"
 cask "notion-cli"
 
 # AI Agents
-brew "rulesync"
 cask "codex"
 cask "claude-code"
 cask "cursor-cli"
