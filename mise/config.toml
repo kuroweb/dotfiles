@@ -1,0 +1,13 @@
+[tools]
+node = "26"
+"npm:@playwright/cli" = "latest"
+"npm:rulesync" = "latest"
+"pipx:esptool" = "latest"
+"pipx:powerline-shell" = "latest"
+python = "3.13"
+ruby = "3.2.2"
+uv = "latest"
+yarn = "1.22.22"
+
+[settings]
+idiomatic_version_file_enable_tools = ["node", "ruby", "python"]

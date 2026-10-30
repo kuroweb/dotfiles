@@ -46,6 +46,13 @@ macOS の開発環境設定を管理するリポジトリ
   source ~/.zshrc
   ```
 
+- mise でツールをインストール
+
+  ```bash
+  bash ~/dotfiles/mise/install.sh
+  mise install
+  ```
+
 - 👉詳細なセットアップは以下のセクションを参照すること
 
 ## Homebrew
@@ -151,7 +158,16 @@ macOS の開発環境設定を管理するリポジトリ
 
 ## mise
 
-- Ruby 3.2.2 をインストール
+- Node.js・Ruby などのバージョンを `mise/config.toml` で管理している
+
+- 設定ファイルをリンクし、ツールをインストール
+
+  ```bash
+  bash ~/dotfiles/mise/install.sh
+  mise install
+  ```
+
+- ツールを追加・変更（`mise/config.toml` に書き込まれる）
 
   ```bash
   mise use -g ruby@3.2.2
