@@ -59,7 +59,7 @@ export PATH="$PATH:$GOPATH/bin"
 # node
 #
 
-eval "$(nodenv init -)"
+eval "$(mise activate zsh)"
 
 #
 # java

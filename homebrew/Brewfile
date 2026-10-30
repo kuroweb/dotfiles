@@ -31,8 +31,7 @@ brew "readline"
 brew "ruby-build"
 
 # Node.js
-brew "nodenv"
-brew "node-build"
+brew "mise"
 brew "node"
 brew "yarn"
 
