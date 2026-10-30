@@ -31,10 +31,6 @@ brew "libyaml"
 brew "openssl@3"
 brew "readline"
 
-# Python
-brew "pyenv"
-brew "pipx"
-
 # Java
 brew "openjdk"
 

@@ -120,7 +120,7 @@ macOS の開発環境設定を管理するリポジトリ
 - powerline-shell をインストール
 
   ```bash
-  pipx install powerline-shell
+  mise use -g pipx:powerline-shell
   ```
 
 - 設定ファイルをリンク
